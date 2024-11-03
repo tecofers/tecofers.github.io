@@ -1,0 +1,6 @@
+title: "My Blog"
+description: "A blog about tech"
+author: Ali Imran
+baseurl: ""
+url: "https://tecofers.github.io"
+theme: minima
