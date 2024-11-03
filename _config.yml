@@ -3,4 +3,16 @@ description: "A blog about tech"
 author: Ali Imran
 baseurl: ""
 url: "https://tecofers.github.io"
+markdown: kramdown
 theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Collections
+collections:
+  - projects
