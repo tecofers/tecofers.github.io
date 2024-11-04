@@ -1,18 +1,37 @@
-title: "My Blog"
-description: "A blog about tech"
-author: Ali Imran
-baseurl: ""
-url: "https://tecofers.github.io"
+# Site settings
+title: Unix Solutions Blog
+description: Practical Solutions for Unix Problems
+baseurl: "/our-blog" # the subpath of your site
+url: "" # the base hostname & protocol for your site
+
+# Build settings
 markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+permalink: /blog/:title/
 
-# Pagination
-paginate: 5
-paginate_path: "/page:num/"
+# Social links
+github_username: tecofers
+twitter_username: AliImranMuneeri
+linkedin_username: ali-imran-nagori
 
-# Collections
-collections:
-  - projects
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
