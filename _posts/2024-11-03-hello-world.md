@@ -2,17 +2,9 @@
 layout: post
 title: "Welcome to My Blog"
 date: 2024-10-29
-author: Your Name
+author: Ali Imran
 categories: [blog, introduction]
 ---
 
-This is my first blog post! Welcome to my new blog.
+This is a test page.
 
-## What to Expect
-
-Here's what I'll be writing about:
-- Topic 1
-- Topic 2
-- Topic 3
-
-Stay tuned for more posts!
