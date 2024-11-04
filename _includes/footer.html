@@ -1,9 +1,16 @@
 <footer class="site-footer">
-    <div class="footer-content">
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+    <div class="container">
         <div class="social-links">
-            <a href="https://github.com/yourusername">GitHub</a>
-            <a href="https://twitter.com/yourusername">Twitter</a>
+            {% if site.github_username %}
+            <a href="https://github.com/{{ site.github_username }}" target="_blank">GitHub</a>
+            {% endif %}
+            {% if site.twitter_username %}
+            <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">Twitter</a>
+            {% endif %}
+            {% if site.linkedin_username %}
+            <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank">LinkedIn</a>
+            {% endif %}
         </div>
+        <p class="copyright">&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
     </div>
 </footer>
