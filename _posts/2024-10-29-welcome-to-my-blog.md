@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Welcome to My Blog"
+title: "Blog 29/10"
 date: 2024-10-29
 author: Your Name
 categories: [blog, introduction]
+permalink: /blog/
 ---
 
 This is my first blog post! Welcome to my new blog.
