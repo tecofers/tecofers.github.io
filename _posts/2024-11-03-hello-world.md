@@ -4,6 +4,7 @@ title: "Welcome to My Blog"
 date: 2024-10-29
 author: Ali Imran
 categories: [blog, introduction]
+permalink: /blog/
 ---
 
 This is a test page.
