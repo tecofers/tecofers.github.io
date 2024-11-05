@@ -10,9 +10,9 @@ Feel free to connect with me through any of the following channels:
 
 ### Social Media:
 
-LinkedIn: [Ali Imran Muneeri] (https://www.linkedin.com/in/ali-imran-nagori/)
-Twitter: [@AliImranMuneeri] (https://x.com/AliImranMuneeri)
-Facebook: [Ali Imran Nagori] (https://www.facebook.com/aliimran.nagori/)
+LinkedIn: [Ali Imran Muneeri](https://www.linkedin.com/in/ali-imran-nagori/)
+Twitter: [@AliImranMuneeri](https://x.com/AliImranMuneeri)
+Facebook: [Ali Imran Nagori](https://www.facebook.com/aliimran.nagori/)
 Email:
 
 For any inquiries or collaborations, you can reach out to us via email at: islaah[dot]91[at]gmail[dot]com.
