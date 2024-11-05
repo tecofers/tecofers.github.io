@@ -1,3 +1,12 @@
+---
+layout: post
+title: "What Is VPS Hosting?"
+date: 2024-11-05
+author: Ali Imran Muneeri
+categories: [blog, VPS]
+featured: true
+---
+
 # What Is VPS Hosting? A Beginner’s Guide to Virtual Private Servers
 
 ## Introduction
