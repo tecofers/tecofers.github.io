@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Essential Unix Commands Every Developer Should Know"
-date: 2024-11-12 09:00:00 -0500
+date: 2024-11-12
 categories: [blog, commands]
 tags: [unix, commands, terminal]
 featured: true
 excerpt: "A comprehensive guide to essential Unix commands that every developer should master for efficient system navigation and file management."
-author: Your Name
+author: Ali imran Muneeri
 ---
 
 Every Unix developer should have a solid grasp of fundamental commands that make navigating and managing systems efficient. In this post, we'll explore the most crucial Unix commands that you'll use daily.
