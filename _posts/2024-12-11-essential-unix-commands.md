@@ -14,6 +14,7 @@ Every Unix developer should have a solid grasp of fundamental commands that make
 ## File Navigation Commands
 
 ### pwd (Print Working Directory)
+
 ```bash
 pwd
 # Output: /home/username/documents
@@ -22,12 +23,14 @@ pwd
 This command shows your current location in the filesystem.
 
 ### ls (List Directory Contents)
+
 ```bash
 ls -la
 # Shows all files including hidden ones with detailed information
 ```
 
 ### cd (Change Directory)
+
 ```bash
 cd /path/to/directory
 cd ..  # Go up one directory
@@ -37,12 +40,14 @@ cd ~   # Go to home directory
 ## File Management
 
 ### cp (Copy)
+
 ```bash
 cp source.txt destination.txt
 cp -r source_dir destination_dir  # Copy directories recursively
 ```
 
 ### mv (Move/Rename)
+
 ```bash
 mv oldname.txt newname.txt  # Rename file
 mv file.txt /new/location/  # Move file
