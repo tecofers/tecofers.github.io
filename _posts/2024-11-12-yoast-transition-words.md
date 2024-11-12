@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Essential Linux Commands to Understand Your System"
+title: "Transition words to help you in writing SEO articles and Post"
 date: 2024-11-05
 author: Ali Imran Muneeri
-categories: [blog, commands]
+categories: [blog]
 featured: true
 --- 
 
