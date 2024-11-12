@@ -120,3 +120,28 @@ body {
     color: var(--primary-color);
     text-decoration: none;
 }
+
+/* Category styles */
+.categories {
+    margin: 0 10px;
+}
+
+.category {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.category:hover {
+    text-decoration: underline;
+}
+
+/* Update post-meta to accommodate categories */
+.post-meta {
+    color: #666;
+    font-size: 0.9em;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
