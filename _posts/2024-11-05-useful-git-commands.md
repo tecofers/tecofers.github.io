@@ -1,12 +1,3 @@
----
-layout: post
-title: "Essential Git Commands for Developers"
-date: 2024-11-05
-author: Ali Imran
-categories: [blog, commands]
-featured: true
----
-
 # Essential Git Commands for Developers
 
 Here's a collection of commonly used Git commands that every developer should know.
@@ -57,23 +48,22 @@ git blame <file>     # See who changed what in a file
 ## Tips and Tricks
 
 1. **Undo Last Commit**
-  
-  ```bash
-  git reset --soft HEAD~1
-  ```
-  
+   
+   ```bash
+   git reset --soft HEAD~1
+   ```
+
 2. **Amend Last Commit**
-  
-  ```bash
-  git commit --amend
-  ```
-  
+   
+   ```bash
+   git commit --amend
+   ```
+
 3. **Force Push (use carefully!)**
-  
-  ```bash
-  git push -f origin main
-  ```
-  
+   
+   ```bash
+   git push -f origin main
+   ```
 
 Remember to always be careful with commands that modify history or force operations!
 
