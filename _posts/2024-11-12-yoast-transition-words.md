@@ -1,12 +1,20 @@
 ---
+<<<<<<< HEAD
 
 layout: post
 title: "Essential Linux Commands to Understand Your System"
+=======
+layout: post
+title: "Transition words to help you in writing SEO articles and Post"
+>>>>>>> 2081a750addab2d5a3ac843de3b7109b22beba07
 date: 2024-11-05
 author: Ali Imran Muneeri
 categories: [blog]
 featured: true
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2081a750addab2d5a3ac843de3b7109b22beba07
 --- 
 
 ## Yoast Transition Words
