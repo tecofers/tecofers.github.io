@@ -32,7 +32,24 @@ layout: default
         {{ content }}
     </div>
 
-    {% if page.comments %}
+  
+    <footer class="post-footer">
+        {% if page.author %}
+        <p class="author">Written by {{ page.author }}</p>
+        {% endif %}
+        
+        <div class="post-navigation">
+            {% if page.previous %}
+            <a class="prev" href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.title }}</a>
+            {% endif %}
+            
+            {% if page.next %}
+            <a class="next" href="{{ page.next.url | relative_url }}">{{ page.next.title }} &rarr;</a>
+            {% endif %}
+        </div>
+    </footer>
+
+      {% if page.comments %}
 <div id="disqus_thread"></div>
 <script>
     /**
@@ -54,19 +71,4 @@ layout: default
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     {% endif %}
 
-    <footer class="post-footer">
-        {% if page.author %}
-        <p class="author">Written by {{ page.author }}</p>
-        {% endif %}
-        
-        <div class="post-navigation">
-            {% if page.previous %}
-            <a class="prev" href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.title }}</a>
-            {% endif %}
-            
-            {% if page.next %}
-            <a class="next" href="{{ page.next.url | relative_url }}">{{ page.next.title }} &rarr;</a>
-            {% endif %}
-        </div>
-    </footer>
 </article>
