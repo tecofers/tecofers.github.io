@@ -7,6 +7,7 @@ date: 2024-11-05
 author: Ali Imran Muneeri
 categories: [blog]
 featured: true
+comments: true
 --- 
 
 ## Yoast Transition Words
