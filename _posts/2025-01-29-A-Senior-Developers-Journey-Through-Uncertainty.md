@@ -5,6 +5,7 @@ date: 2025-01-29
 author: Ali Imran Muneeri
 categories: [blog]
 featured: true
+comments: true
 ---
 
 # **The Hidden Reality of Tech Job Hunting: A Senior Developer's Journey Through Uncertainty**
