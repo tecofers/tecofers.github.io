@@ -8,7 +8,7 @@ featured: true
 comments: true
 ---
 
-# **Unlocking the Future: Deepseek’s Janus Pro Model Launched on January 28, 2025!**
+## **Introduction**
 
 Hey there, future enthusiasts! 🚀 If you’ve been waiting for the next big leap in AI technology, your wait is officially over. On January 28, 2025, Deepseek unveiled its groundbreaking **Janus Pro Model**, and let me tell you—this isn’t just another AI update. This is a game-changer, a paradigm shift, and a giant leap forward for anyone who loves innovation.  
 
