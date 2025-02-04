@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Latest Developments in DeepSeek AI: What’s New and Why It Matters"
+title: "DeepSeek AI: China’s Rising Star in the Global AI Race"
 date: 2025-02-04
 categories: [blog]
 tags: [DeepSeek]
