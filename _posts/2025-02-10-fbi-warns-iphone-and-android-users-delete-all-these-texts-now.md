@@ -10,6 +10,9 @@ excerpt: "The fight against phishing scams is an ongoing battle. Don’t ignore 
 author: Ali imran Muneeri
 
 ---
+<p align="center">
+ <img src="https://github.com/user-attachments/assets/12084aa6-f56b-4e18-ad01-95692d24b701">
+</p>
 
 Imagine, you woke up one morning, and your phone buzzed with a text that made your heart skip a beat. It said you owed money for unpaid tolls. In an instant, you'll realized it wasn’t a bill from a toll agency at all—it was a scam designed to steal your hard-earned cash and personal information. I’m here to break down what’s happening, and guide you through why you need to delete these scam texts immediately.
 
