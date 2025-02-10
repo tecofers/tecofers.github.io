@@ -55,7 +55,7 @@ If you’re not ready to switch to Linux full-time, you can run it in a virtual 
 
 This lets you experiment with Linux without affecting your main operating system.  As mentioned, I'm using Parrot OVA file for VirtualBox:
 
-<img src="file:///~/2025-02-08-16-35-15-image.png" title="" alt="" data-align="center">
+![2025-02-08-16-35-15-image](https://github.com/user-attachments/assets/b1212de4-880b-4c26-bec0-f1a8e0a44698)
 
 Just import it and you're ready to go.
 
