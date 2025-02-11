@@ -74,6 +74,7 @@ Now that you know the types of recon, let’s talk about the tools you’ll use.
 
 #### **1. Nmap**
 
+![Alt text](/assets/images/2025-02-11_16-42.png)
 Nmap is the ultimate reconnaissance tool. It lets you scan networks, discover devices, and identify open ports and services.  
 
 Example command:  
