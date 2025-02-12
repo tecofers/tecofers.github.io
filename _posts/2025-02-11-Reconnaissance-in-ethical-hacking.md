@@ -74,7 +74,7 @@ Now that you know the types of recon, let’s talk about the tools you’ll use.
 
 #### **1. Nmap**
 
-<img src="/assets/images/2025-02-11_16-42.png" alt="Description" style="max-width:100%; height:auto;">
+<img src="/assets/images/2025-02-11_16-42.png" alt="Nmap" class="img">
 
 Nmap is the ultimate reconnaissance tool. It lets you scan networks, discover devices, and identify open ports and services.  
 
@@ -87,6 +87,8 @@ nmap -sV -O 192.168.1.1
 This scans the target IP address, identifies services, and guesses the operating system.  
 
 #### **2. Whois**
+<img src="https://github.com/user-attachments/assets/1e6a2070-9ac1-4756-bcdf-d3d8e4af8e47" alt="whois" class="img">
+
 
 Whois is a tool for looking up domain registration details. It can tell you who owns a domain, when it was registered, and where it’s hosted.  
 
@@ -98,31 +100,52 @@ whois example.com
 
 #### **3. theHarvester**
 
+<img src="https://github.com/user-attachments/assets/be175cbd-9987-4fda-9c8c-198fc143a91c" alt="theHarvester" class="img">
+
 theHarvester is a tool for gathering email addresses, subdomains, and other information from public sources.  
 
 Example command:  
 
 ```bash
-theHarvester -d example.com -b google
+theHarvester -d example.com -b otx
 ```
 
-This searches Google for information about `example.com`.  
+This searches otx for information about `example.com`. Seriously, there are many search domains that can completely naked down your domain.
 
 #### **4. Shodan**
 
-Shodan is a search engine for internet-connected devices. It lets you find devices, servers, and services that are exposed to the internet.  
+Shodan is a search engine for internet-connected devices. It lets you find devices, servers, and services that are exposed to the internet. First, you need to create a account on their website. Then, after login you'll get an API key to use their serach filters.
 
 Example search:  
 
 ```bash
 city:"New York" port:22
 ```
+<img src="https://github.com/user-attachments/assets/e1ec0b82-11a5-4c52-9d70-e212a5a05c1d" alt="shodan" class="img">
 
-This finds devices in New York with port 22 (SSH) open.  
+This finds devices in New York with port 22 (SSH) open.  As you can see, it showing devices from top organizations and ssh products. Also, we can guess the OS.
+To use the CLI-interface, first initialize Shodan using the api key:
+
+```bash
+$ shodan init sPOPq****nSCME7GG1***************oj8
+```
+Now, run the command:
+
+```bash
+$ shodan stats --facets port:80 country:US
+```
+
+<img src="https://github.com/user-attachments/assets/ed78c056-6d05-4293-bd0a-e58b8c695e0e" alt="shodan-cli" class="img">
+
 
 #### **5. Maltego**
 
-Maltego is a powerful tool for visualizing relationships between people, domains, and networks. It’s great for mapping out a target’s environment.  
+Maltego is a powerful tool for visualizing relationships between people, domains, and networks. It’s great for mapping out a target’s environment. First, create an account on their website. Next, launch the application from the menu or command line:
+
+```bash
+$ maltego
+```
+Now, continue with the option of activation with ID. This will give you a browser link. Just use the option of activating with Maltego ID by clicking a browser link to authenticate. Please have some click-click play to complete the process.
 
 ---
 
