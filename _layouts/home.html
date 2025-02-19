@@ -1,33 +1,80 @@
 ---
 layout: default
+title: Home
 ---
-<div class="home">
-    <section class="featured-posts">
-        <h2>Featured Posts</h2>
-        {% for post in site.posts %}
-            {% if post.featured %}
-            <article class="featured-post">
-                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                <div class="post-meta">
-                    <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
-                </div>
-                <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
-                <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
-            </article>
-            {% endif %}
-        {% endfor %}
-    </section>
 
-    <section class="recent-posts">
-        <h2>Recent Posts</h2>
-        {% for post in site.posts limit:3 %}
-        <article class="post-preview">
-            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            <div class="post-meta">
-                <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
-            </div>
-            <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-        </article>
-        {% endfor %}
-    </section>
+<div class="home">
+
+  <!-- Hero Section with Strong Quote and Contact Button -->
+  <section class="hero">
+    <blockquote class="hero-quote">
+      “Empowering words create inspiring futures.”
+    </blockquote>
+    <a href="/contact" class="btn btn-primary">Contact Us</a>
+  </section>
+
+  <!-- Our Services Section -->
+  <section class="services">
+    <h2>Our Writing Services</h2>
+    <ul>
+      <li>Technical Writing</li>
+      <li>Medical Content</li>
+      <li>General &amp; Blog Writing</li>
+      <li>Academic Writing</li>
+      <li>Marketing Copy</li>
+      <li>SEO Content</li>
+    </ul>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us">
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>Expert Writers</li>
+      <li>Domain-Specific Expertise</li>
+      <li>Plagiarism-Free Content</li>
+      <li>Timely Delivery</li>
+      <li>Competitive Pricing</li>
+    </ul>
+  </section>
+
+  <!-- Projects Completed Section -->
+  <section class="projects-completed">
+    <h2>Projects Completed</h2>
+    <div class="counter">
+      <span>200+</span> <!-- Replace with dynamic data if available -->
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>Testimonials</h2>
+    <article class="testimonial">
+      <p>"Their work is outstanding and always delivered on time!"</p>
+      <cite>- John Doe, CEO of ExampleCorp</cite>
+    </article>
+    <!-- Additional testimonial articles can be added here -->
+  </section>
+
+  <!-- FAQs Section -->
+  <section class="faqs">
+    <h2>FAQs</h2>
+    <div class="faq-item">
+      <h3>What services do you offer?</h3>
+      <p>We offer a wide range of writing services, including technical writing, medical content creation, academic writing, and more.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do you ensure quality?</h3>
+      <p>Our team of expert writers follows rigorous quality standards and research processes to deliver plagiarism-free and engaging content.</p>
+    </div>
+    <!-- Add more FAQs as needed -->
+  </section>
+
+  <!-- Final Contact Section -->
+  <section class="contact-us">
+    <h2>Contact Us</h2>
+    <p>If you’re ready to take your project to the next level, get in touch with us today!</p>
+    <a href="/contact" class="btn btn-secondary">Get in Touch</a>
+  </section>
+
 </div>
