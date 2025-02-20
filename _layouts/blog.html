@@ -1,40 +1,43 @@
----
-layout: default
-title: Blog
----
-
 <div class="blog">
-  <h1>{{ page.title }}</h1>
+    <h1 class="mb-4">{{ page.title }}</h1>
 
-  <!-- Recent Posts Section -->
-  <section class="recent-posts">
-    <h2>Recent Posts</h2>
-    {% for post in site.posts limit:3 %}
-    <article class="post-preview">
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      <div class="post-meta">
-        <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
-      </div>
-      <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
-      <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
-    </article>
-    {% endfor %}
-  </section>
-
-  <!-- Featured Posts Section -->
-  <section class="featured-posts">
-    <h2>Featured Posts</h2>
-    {% for post in site.posts %}
-      {% if post.featured %}
-      <article class="featured-post">
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <div class="post-meta">
-          <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
+    <div class="row">
+        <div class="col-md-8">
+            <section class="recent-posts">
+                <h2 class="mb-3">Recent Posts</h2>
+                {% for post in site.posts limit:3 %}
+                <article class="post-preview card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                        <div class="post-meta text-muted">
+                            <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
+                        </div>
+                        <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+                        <a href="{{ post.url | relative_url }}" class="btn btn-primary">Read More</a>
+                    </div>
+                </article>
+                {% endfor %}
+            </section>
         </div>
-        <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
-        <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
-      </article>
-      {% endif %}
-    {% endfor %}
-  </section>
+
+        <div class="col-md-4">
+            <section class="featured-posts">
+                <h2 class="mb-3">Featured Posts</h2>
+                {% for post in site.posts %}
+                    {% if post.featured %}
+                    <article class="featured-post card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                            <div class="post-meta text-muted">
+                                <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
+                            </div>
+                            <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                            <a href="{{ post.url | relative_url }}" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </article>
+                    {% endif %}
+                {% endfor %}
+            </section>
+        </div>
+    </div>
 </div>
