@@ -16,4 +16,27 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Logo styling */
+.navbar-brand img {
+    max-height: 40px; /* Adjust this value to match your logo's desired height */
+    width: auto;
+}
+
+/* Optional: Add hover effect */
+.navbar-brand:hover {
+    opacity: 0.8;
+}
+
+/* Optional: Adjust spacing between logo and text */
+.navbar-brand span {
+    padding-left: 10px;
+}
+
+/* Optional: Make logo responsive */
+@media (max-width: 768px) {
+    .navbar-brand img {
+        max-height: 30px; /* Smaller logo on mobile devices */
+    }
+}
+
 /* Add any additional custom styles that don't conflict with Bootstrap */
