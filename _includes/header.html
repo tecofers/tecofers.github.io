@@ -1,14 +1,29 @@
 <header class="site-header">
-    <div class="container">
-        <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-        <nav class="site-nav">
-            <ul>
-                <li><a href="{{ '/' | relative_url }}" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
-                <li><a href="{{ '/blog' | relative_url }}" {% if page.url == "/blog/" %}class="active"{% endif %}>Blog</a></li>
-                <li><a href="{{ '/about' | relative_url }}" {% if page.url == "/about/" %}class="active"{% endif %}>About</a></li>
-                <li><a href="{{ '/contact' | relative_url }}" {% if page.url == "/contact/" %}class="active"{% endif %}>Contact</a></li>
-                <li><a href="{{ '/disclaimer' | relative_url }}" {% if page.url == "/disclaimer/" %}class="active"{% endif %}>Disclaimer</a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url == '/blog/' %}active{% endif %}" href="{{ '/blog' | relative_url }}">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url == '/about/' %}active{% endif %}" href="{{ '/about' | relative_url }}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url == '/contact/' %}active{% endif %}" href="{{ '/contact' | relative_url }}">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url == '/disclaimer/' %}active{% endif %}" href="{{ '/disclaimer' | relative_url }}">Disclaimer</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>
