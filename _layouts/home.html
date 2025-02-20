@@ -1,80 +1,139 @@
----
-layout: default
-title: Home
----
+<!-- Hero Section -->
+<section class="bg-dark text-white position-relative vh-100 overflow-hidden">
+    <!-- Background image using Bootstrap's ratio and position utilities -->
+    <div class="position-absolute w-100 h-100">
+        <img src="{{ '/assets/images/hero-bg.jpg' | relative_url }}" 
+             class="w-100 h-100 object-fit-cover" 
+             alt="Hero Background">
+    </div>
+    
+    <!-- Dark overlay -->
+    <div class="position-absolute w-100 h-100 bg-dark opacity-50"></div>
+    
+    <!-- Content -->
+    <div class="position-relative h-100">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-8 col-md-10 mx-auto text-center">
+                    <!-- Hero content -->
+                    <h1 class="display-4 fw-bold mb-4">
+                        Professional Writing Services
+                    </h1>
+                    <p class="lead mb-4">
+                        Empowering words create inspiring futures
+                    </p>
+                    <a href="{{ '/contact' | relative_url }}" 
+                       class="btn btn-primary btn-lg px-5 py-3 fw-semibold">
+                        Contact Us 
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<div class="home">
+<!-- Rest of your home page content -->
+<div class="container py-5">
+    <!-- Services Section -->
+    <section class="mb-5">
+        <h2 class="text-center mb-4">Our Writing Services</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Technical Writing</h5>
+                        <p class="card-text">Professional technical documentation and guides.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Medical Content</h5>
+                        <p class="card-text">Accurate and reliable medical writing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Blog Writing</h5>
+                        <p class="card-text">Engaging content for your blog.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Hero Section with Strong Quote and Contact Button -->
-  <section class="hero">
-    <blockquote class="hero-quote">
-      “Empowering words create inspiring futures.”
-    </blockquote>
-    <a href="/contact" class="btn btn-primary">Contact Us</a>
-  </section>
-
-  <!-- Our Services Section -->
-  <section class="services">
-    <h2>Our Writing Services</h2>
-    <ul>
-      <li>Technical Writing</li>
-      <li>Medical Content</li>
-      <li>General &amp; Blog Writing</li>
-      <li>Academic Writing</li>
-      <li>Marketing Copy</li>
-      <li>SEO Content</li>
-    </ul>
-  </section>
-
-  <!-- Why Choose Us Section -->
-  <section class="why-choose-us">
-    <h2>Why Choose Us?</h2>
-    <ul>
-      <li>Expert Writers</li>
-      <li>Domain-Specific Expertise</li>
-      <li>Plagiarism-Free Content</li>
-      <li>Timely Delivery</li>
-      <li>Competitive Pricing</li>
-    </ul>
-  </section>
+    <!-- Why Choose Us Section -->
+    <section class="mb-5">
+        <h2 class="text-center mb-4">Why Choose Us?</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="text-center">
+                    <i class="bi bi-star-fill display-4 text-primary mb-3"></i>
+                    <h5>Expert Writers</h5>
+                    <p>Professional writers with industry expertise.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <i class="bi bi-clock-fill display-4 text-primary mb-3"></i>
+                    <h5>Timely Delivery</h5>
+                    <p>Meeting deadlines with quality content.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <i class="bi bi-check-circle-fill display-4 text-primary mb-3"></i>
+                    <h5>Quality Assured</h5>
+                    <p>Thoroughly reviewed and plagiarism-free content.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
   <!-- Projects Completed Section -->
-  <section class="projects-completed">
-    <h2>Projects Completed</h2>
-    <div class="counter">
-      <span>200+</span> <!-- Replace with dynamic data if available -->
-    </div>
-  </section>
+    <section class="text-center mb-5 py-5 bg-light rounded">
+        <h2 class="mb-4">Projects Completed</h2>
+        <div class="display-1 fw-bold text-primary mb-3">200+</div>
+        <p class="lead">Successfully delivered projects and counting</p>
+    </section>
 
-  <!-- Testimonials Section -->
-  <section class="testimonials">
-    <h2>Testimonials</h2>
-    <article class="testimonial">
-      <p>"Their work is outstanding and always delivered on time!"</p>
-      <cite>- John Doe, CEO of ExampleCorp</cite>
-    </article>
-    <!-- Additional testimonial articles can be added here -->
-  </section>
+    <!-- Testimonials Section -->
+    <section class="mb-5">
+        <h2 class="text-center mb-4">Testimonials</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"Their work is outstanding and always delivered on time!"</p>
+                        <footer class="blockquote-footer mt-2">
+                            John Doe <cite title="Company">CEO of ExampleCorp</cite>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"Excellent quality and professional service!"</p>
+                        <footer class="blockquote-footer mt-2">
+                            Jane Smith <cite title="Company">Marketing Director</cite>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- FAQs Section -->
-  <section class="faqs">
-    <h2>FAQs</h2>
-    <div class="faq-item">
-      <h3>What services do you offer?</h3>
-      <p>We offer a wide range of writing services, including technical writing, medical content creation, academic writing, and more.</p>
-    </div>
-    <div class="faq-item">
-      <h3>How do you ensure quality?</h3>
-      <p>Our team of expert writers follows rigorous quality standards and research processes to deliver plagiarism-free and engaging content.</p>
-    </div>
-    <!-- Add more FAQs as needed -->
-  </section>
-
-  <!-- Final Contact Section -->
-  <section class="contact-us">
-    <h2>Contact Us</h2>
-    <p>If you’re ready to take your project to the next level, get in touch with us today!</p>
-    <a href="/contact" class="btn btn-secondary">Get in Touch</a>
-  </section>
-
+    <!-- Contact Section -->
+    <section class="text-center">
+        <h2 class="mb-4">Ready to Get Started?</h2>
+        <p class="lead mb-4">Contact us today to discuss your project requirements.</p>
+        <a href="{{ '/contact' | relative_url }}" class="btn btn-primary btn-lg">
+            Get in Touch
+        </a>
+    </section>
 </div>
