@@ -1,16 +1,20 @@
-<footer class="site-footer">
+<footer class="site-footer bg-dark text-white py-4 mt-5">
     <div class="container">
-        <div class="social-links">
-            {% if site.github_username %}
-            <a href="https://github.com/{{ site.github_username }}" target="_blank">GitHub</a>
-            {% endif %}
-            {% if site.twitter_username %}
-            <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">Twitter</a>
-            {% endif %}
-            {% if site.linkedin_username %}
-            <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank">LinkedIn</a>
-            {% endif %}
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="social-links mb-3">
+                    {% if site.github_username %}
+                    <a href="https://github.com/{{ site.github_username }}" class="text-white mx-2" target="_blank">GitHub</a>
+                    {% endif %}
+                    {% if site.twitter_username %}
+                    <a href="https://twitter.com/{{ site.twitter_username }}" class="text-white mx-2" target="_blank">Twitter</a>
+                    {% endif %}
+                    {% if site.linkedin_username %}
+                    <a href="https://linkedin.com/in/{{ site.linkedin_username }}" class="text-white mx-2" target="_blank">LinkedIn</a>
+                    {% endif %}
+                </div>
+                <p class="copyright mb-0">&copy; 2024 <a href="https://tecofers.com" class="text-decoration-none" style="color: #ff6347;">Tecofers</a>. All rights reserved.</p>
+            </div>
         </div>
-        <p class="copyright">&copy; 2024 <a href="https://tecofers.com" style="color: #ff6347;">Tecofers</a>. All rights reserved.</p>
     </div>
 </footer>
