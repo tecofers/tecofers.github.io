@@ -1,37 +1,50 @@
+---
+layout: default
+title: Home
+---
 <!-- Hero Section -->
-<section class="bg-dark text-white position-relative vh-100 overflow-hidden">
-    <!-- Background image using Bootstrap's ratio and position utilities -->
-    <div class="position-absolute w-100 h-100">
-        <img src="{{ '/assets/images/hero-bg.jpg' | relative_url }}" 
-             class="w-100 h-100 object-fit-cover" 
-             alt="Hero Background">
-    </div>
-    
-    <!-- Dark overlay -->
-    <div class="position-absolute w-100 h-100 bg-dark opacity-50"></div>
-    
-    <!-- Content -->
-    <div class="position-relative h-100">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-lg-8 col-md-10 mx-auto text-center">
-                    <!-- Hero content -->
-                    <h1 class="display-4 fw-bold mb-4">
-                        Professional Writing Services
-                    </h1>
-                    <p class="lead mb-4">
-                        Empowering words create inspiring futures
-                    </p>
-                    <a href="{{ '/contact' | relative_url }}" 
-                       class="btn btn-primary btn-lg px-5 py-3 fw-semibold">
-                        Contact Us 
-                        <i class="bi bi-arrow-right ms-2"></i>
-                    </a>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero {
+            background-image: url('/assets/images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 50vh; /* Adjust the height as needed */
+            position: relative;
+            color: white;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <section class="hero">
+            <div class="hero-overlay">
+                <div class="text-center">
+                    <h1 class="display-4">Empowering Words Create Inspiring Futures</h1>
+                    <p class="lead">Professional writing services to elevate your content.</p>
+                    <a href="/contact" class="btn btn-primary">Contact Us</a>
                 </div>
             </div>
+        </section>
+        <!-- Main content -->
+        <div id="content" class="container mt-5">
+            <!-- Blog content goes here -->
         </div>
     </div>
-</section>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
 
 <!-- Rest of your home page content -->
 <div class="container py-5">
