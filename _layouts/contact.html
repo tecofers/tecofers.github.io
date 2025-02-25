@@ -1,0 +1,168 @@
+---
+layout: default
+---
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <!-- Contact Form Section -->
+        <div class="col-lg-8 mb-5">
+            <h1 class="text-center mb-4">{{ page.title }}</h1>
+            <p class="text-center mb-5">{{ content }}</p>
+
+            <!-- Contact Form -->
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
+                    <form action="https://formspree.io/f/xzzdlkzl" method="POST" class="needs-validation" novalidate>
+                        <!-- Name -->
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                            <div class="invalid-feedback">
+                                Please provide your name.
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid email address.
+                            </div>
+                        </div>
+
+                        <!-- Subject -->
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject *</label>
+                            <select class="form-select" id="subject" name="subject" required>
+                                <option value="">Choose a subject...</option>
+                                <option value="Technical Writing">Technical Writing</option>
+                                <option value="Medical Content">Medical Content</option>
+                                <option value="Blog Writing">Blog Writing</option>
+                                <option value="Academic Writing">Academic Writing</option>
+                                <option value="Marketing Copy">Marketing Copy</option>
+                                <option value="SEO Content">SEO Content</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a subject.
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            <div class="invalid-feedback">
+                                Please enter your message.
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg px-5">
+                                Send Message
+                                <i class="bi bi-send ms-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="col-lg-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="h5 mb-4">Contact Information</h3>
+                    
+                    <div class="mb-4">
+                        <h4 class="h6 mb-3">
+                            <i class="bi bi-envelope-fill text-primary me-2"></i>Email
+                        </h4>
+                        <p class="mb-0">
+                            <a href="mailto:islaah.91@gmail.com" class="text-decoration-none">
+                                islaah.91@gmail.com
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h4 class="h6 mb-3">
+                            <i class="bi bi-telephone-fill text-primary me-2"></i>Phone
+                        </h4>
+                        <p class="mb-0">
+                            <a href="tel:+1234567890" class="text-decoration-none">
+                                +91 810-950-7562
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h4 class="h6 mb-3">
+                            <i class="bi bi-clock-fill text-primary me-2"></i>Business Hours
+                        </h4>
+                        <p class="mb-0">
+                            Monday - Saturday: 9:00 AM - 5:00 PM<br><br>
+                            Friday: 9:00 AM - 12:00 PM, 3:00 PM - 5:00 PM<br><br>
+                            Sunday: Closed
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="h6 mb-3">
+                            <i class="bi bi-geo-alt-fill text-primary me-2"></i>Location
+                        </h4>
+                        <p class="mb-0">
+                            50/8, Begampura Street<br>
+                            Ujjain, M.P. 456001<br>
+                            India
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="h5 mb-4">Connect With Us</h3>
+                    <div class="d-flex justify-content-around">
+                        <a href="https://www.facebook.com/aliimran.nagori/" class="text-decoration-none" title="Facebook">
+                            <i class="bi bi-facebook fs-4"></i>
+                        </a>
+                        <a href="https://x.com/AliImranMuneeri" class="text-decoration-none" title="Twitter">
+                            <i class="bi bi-twitter fs-4"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ali-imran-nagori/" class="text-decoration-none" title="LinkedIn">
+                            <i class="bi bi-linkedin fs-4"></i>
+                        </a>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Form Validation Script -->
+<script>
+(function () {
+    'use strict'
+
+    // Fetch all forms that need validation
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+        })
+})()
+</script>

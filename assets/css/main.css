@@ -40,3 +40,14 @@
 }
 
 /* Add any additional custom styles that don't conflict with Bootstrap */
+
+/* Optional: Add hover effects to social media icons */
+.social-links a:hover {
+    opacity: 0.8;
+}
+
+/* Optional: Style form focus states */
+.form-control:focus, .form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
