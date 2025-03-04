@@ -1,0 +1,31 @@
+current_clients:
+  - name: Baeldung
+    industry: Technology
+    services: Technical content writing
+    logo: baeldung.png
+    
+  - name: Linux-Magazine
+    industry: Technology
+    services: Technical content writing
+    logo: linux-magazine.png
+
+past_clients:
+  - name: HowToForge
+    logo: howtoforge.png
+    
+  - name: LinuxHandBook
+    logo: linuxhandbook.png
+  
+  - name: LinuxHint
+    logo: linuxhint.png    
+
+testimonials:
+  - quote: "Their technical writing expertise significantly improved our API documentation, making it more accessible to our developers."
+    author: John Smith
+    position: CTO
+    company: TechStartup
+    
+  - quote: "Outstanding medical content that perfectly balanced technical accuracy with readability."
+    author: Sarah Johnson
+    position: Product Manager
+    company: HealthTech

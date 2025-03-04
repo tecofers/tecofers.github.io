@@ -51,3 +51,62 @@
     border-color: #80bdff;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
+/* Hero Section */
+.hero {
+    background-image: url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.vh-75 {
+    height: 50vh;
+}
+
+/* Card Styles */
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Grayscale effect for past clients */
+.grayscale {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.grayscale:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Testimonial carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 400px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+}

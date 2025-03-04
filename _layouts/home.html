@@ -2,242 +2,176 @@
 layout: default
 title: Home
 ---
-<!-- Hero Section -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .hero {
-            background-image: url('/assets/images/hero-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 50vh; /* Adjust the height as needed */
-            position: relative;
-            color: white;
-        }
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
-</head>
-<body>
-    <div class="container-fluid p-0">
-        <section class="hero">
-            <div class="hero-overlay">
-                <div class="text-center">
-                    <h1 class="display-4">Empowering Words Create Inspiring Futures</h1>
-                    <p class="lead">Professional writing services to elevate your content.</p>
-                    <a href="/contact" class="btn btn-primary">Contact Us</a>
-                </div>
-            </div>
-        </section>
-        <!-- Main content -->
-        <div id="content" class="container mt-5">
-            <!-- Blog content goes here -->
-        </div>
-    </div>
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
 
-<!-- Rest of your home page content -->
-<div class="container py-5">
+<div class="home">
+    <!-- Hero Section -->
+    <section class="hero vh-75 position-relative">
+        <div class="hero-overlay position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
+            <div class="container text-center text-white">
+                <h1 class="display-4 fw-bold mb-4">Empowering Words Create Inspiring Futures</h1>
+                <p class="lead mb-4">Professional writing services to elevate your content.</p>
+                <a href="{{ '/contact' | relative_url }}" class="btn btn-primary btn-lg">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
-    <section class="mb-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Our Writing Services</h2>
-        <div class="row g-4">
-            <!-- Technical Writing Card -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body d-flex flex-column">
-                        <div class="mb-3">
-                            <i class="bi bi-code-square text-primary display-5"></i>
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Writing Services</h2>
+            <div class="row g-4">
+                {% for service in site.data.services %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <div class="mb-3">
+                                <i class="bi {{ service.icon }} text-primary display-5"></i>
+                            </div>
+                            <h5 class="card-title">{{ service.title }}</h5>
+                            <p class="card-text flex-grow-1">{{ service.description }}</p>
+                            <div class="mt-auto">
+                                <a href="{{ service.url | relative_url }}" class="btn btn-outline-primary stretched-link">
+                                    Learn More 
+                                    <i class="bi bi-arrow-right ms-2"></i>
+                                </a>
+                            </div>
                         </div>
-                        <h5 class="card-title">Technical Writing</h5>
-                        <p class="card-text flex-grow-1">Professional technical documentation, API guides, user manuals, and software documentation.</p>
-                        <div class="mt-auto">
-                            <a href="{{ '/services/technical-writing' | relative_url }}" class="btn btn-outline-primary stretched-link">
-                                Learn More 
-                                <i class="bi bi-arrow-right ms-2"></i>
-                            </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Trusted by Innovative Startups</h2>
+            
+            <!-- Current Collaborations -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="h5 text-center mb-4">Current Collaborations</h3>
+                </div>
+                {% for client in site.data.clients.current_clients %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <img src="{{ '/assets/images/clients/' | append: client.logo | relative_url }}" 
+                                 alt="{{ client.name }}" 
+                                 class="img-fluid mb-3"
+                                 style="max-height: 60px;">
+                            <h4 class="h6 mb-2">{{ client.name }}</h4>
+                            <p class="small text-muted mb-2">{{ client.industry }}</p>
+                            <p class="small">{{ client.services }}</p>
                         </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Past Collaborations -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="h5 text-center mb-4">Previous Collaborations</h3>
+                </div>
+                <div class="col-12">
+                    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-3 justify-content-center">
+                        {% for client in site.data.clients.past_clients %}
+                        <div class="col text-center">
+                            <img src="{{ '/assets/images/clients/' | append: client.logo | relative_url }}" 
+                                 alt="{{ client.name }}" 
+                                 class="img-fluid grayscale"
+                                 style="max-height: 40px;">
+                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
 
-            <!-- Medical Content Card -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body d-flex flex-column">
-                        <div class="mb-3">
-                            <i class="bi bi-heart-pulse text-primary display-5"></i>
+            <!-- Testimonials -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            {% for testimonial in site.data.clients.testimonials %}
+                            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body p-5 text-center">
+                                        <i class="bi bi-quote display-3 text-primary mb-3"></i>
+                                        <blockquote class="mb-4">
+                                            <p class="lead mb-0">{{ testimonial.quote }}</p>
+                                        </blockquote>
+                                        <footer class="blockquote-footer">
+                                            <strong>{{ testimonial.author }}</strong>
+                                            <br>
+                                            <cite title="{{ testimonial.company }}">
+                                                {{ testimonial.position }}, {{ testimonial.company }}
+                                            </cite>
+                                        </footer>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
                         </div>
-                        <h5 class="card-title">Medical Content</h5>
-                        <p class="card-text flex-grow-1">Research papers, medical blogs, healthcare documentation, and clinical content writing.</p>
-                        <div class="mt-auto">
-                            <a href="{{ '/services/medical-writing' | relative_url }}" class="btn btn-outline-primary stretched-link">
-                                Learn More 
-                                <i class="bi bi-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Blog Writing Card -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body d-flex flex-column">
-                        <div class="mb-3">
-                            <i class="bi bi-pencil-square text-primary display-5"></i>
-                        </div>
-                        <h5 class="card-title">Blog Writing</h5>
-                        <p class="card-text flex-grow-1">SEO-optimized blog posts, articles, and content marketing materials.</p>
-                        <div class="mt-auto">
-                            <a href="{{ '/services/blog-writing' | relative_url }}" class="btn btn-outline-primary stretched-link">
-                                Learn More 
-                                <i class="bi bi-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Academic Writing Card -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body d-flex flex-column">
-                        <div class="mb-3">
-                            <i class="bi bi-book text-primary display-5"></i>
-                        </div>
-                        <h5 class="card-title">Academic Writing</h5>
-                        <p class="card-text flex-grow-1">Research papers, thesis writing, academic articles, and educational content.</p>
-                        <div class="mt-auto">
-                            <a href="{{ '/services/academic-writing' | relative_url }}" class="btn btn-outline-primary stretched-link">
-                                Learn More 
-                                <i class="bi bi-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Marketing Copy Card -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body d-flex flex-column">
-                        <div class="mb-3">
-                            <i class="bi bi-megaphone text-primary display-5"></i>
-                        </div>
-                        <h5 class="card-title">Marketing Copy</h5>
-                        <p class="card-text flex-grow-1">Website content, sales copy, email campaigns, and marketing materials.</p>
-                        <div class="mt-auto">
-                            <a href="{{ '/services/marketing-copy' | relative_url }}" class="btn btn-outline-primary stretched-link">
-                                Learn More 
-                                <i class="bi bi-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SEO Content Card -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body d-flex flex-column">
-                        <div class="mb-3">
-                            <i class="bi bi-graph-up text-primary display-5"></i>
-                        </div>
-                        <h5 class="card-title">SEO Content</h5>
-                        <p class="card-text flex-grow-1">Search engine optimized content, keyword research, and meta descriptions.</p>
-                        <div class="mt-auto">
-                            <a href="{{ '/services/seo-content' | relative_url }}" class="btn btn-outline-primary stretched-link">
-                                Learn More 
-                                <i class="bi bi-arrow-right ms-2"></i>
-                            </a>
-                        </div>
+                        {% if site.data.clients.testimonials.size > 1 %}
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Why Choose Us Section -->
-    <section class="mb-5">
-        <h2 class="text-center mb-4">Why Choose Us?</h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="text-center">
-                    <i class="bi bi-star-fill display-4 text-primary mb-3"></i>
-                    <h5>Expert Writers</h5>
-                    <p>Professional writers with industry expertise.</p>
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Choose Us?</h2>
+            <div class="row g-4">
+                {% for reason in site.data.why_choose_us %}
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="bi {{ reason.icon }} display-4 text-primary mb-3"></i>
+                            <h3 class="h5 mb-3">{{ reason.title }}</h3>
+                            <p class="mb-0">{{ reason.description }}</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="text-center">
-                    <i class="bi bi-clock-fill display-4 text-primary mb-3"></i>
-                    <h5>Timely Delivery</h5>
-                    <p>Meeting deadlines with quality content.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="text-center">
-                    <i class="bi bi-check-circle-fill display-4 text-primary mb-3"></i>
-                    <h5>Quality Assured</h5>
-                    <p>Thoroughly reviewed and plagiarism-free content.</p>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
 
-  <!-- Projects Completed Section -->
-    <section class="text-center mb-5 py-5 bg-light rounded">
-        <h2 class="mb-4">Projects Completed</h2>
-        <div class="display-1 fw-bold text-primary mb-3">200+</div>
-        <p class="lead">Successfully delivered projects and counting</p>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="mb-5">
-        <h2 class="text-center mb-4">Testimonials</h2>
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <p class="card-text">"Their work is outstanding and always delivered on time!"</p>
-                        <footer class="blockquote-footer mt-2">
-                            John Doe <cite title="Company">CEO of ExampleCorp</cite>
-                        </footer>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <p class="card-text">"Excellent quality and professional service!"</p>
-                        <footer class="blockquote-footer mt-2">
-                            Jane Smith <cite title="Company">Marketing Director</cite>
-                        </footer>
-                    </div>
-                </div>
-            </div>
+    <!-- Projects Completed Section -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="mb-4">Projects Completed</h2>
+            <div class="display-1 fw-bold text-primary mb-3">200+</div>
+            <p class="lead">Successfully delivered projects and counting</p>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="text-center">
-        <h2 class="mb-4">Ready to Get Started?</h2>
-        <p class="lead mb-4">Contact us today to discuss your project requirements.</p>
-        <a href="{{ '/contact' | relative_url }}" class="btn btn-primary btn-lg">
-            Get in Touch
-        </a>
+    <!-- Call to Action Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="mb-4">Ready to Start Your Project?</h2>
+                    <p class="lead mb-4">Let's create compelling content that drives results.</p>
+                    <a href="{{ '/contact' | relative_url }}" class="btn btn-primary btn-lg">
+                        Get Started
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 </div>
