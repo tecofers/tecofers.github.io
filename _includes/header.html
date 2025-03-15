@@ -18,19 +18,50 @@
                     <li class="nav-item">
                         <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if page.url == '/blog/' %}active{% endif %}" href="{{ '/blog' | relative_url }}">Blog</a>
+                    
+                    <!-- Services Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle {% if page.url contains '/services/' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ '/services/technical-writing' | relative_url }}">Technical Writing</a></li>
+                            <li><a class="dropdown-item" href="{{ '/services/medical-writing' | relative_url }}">Medical Content</a></li>
+                            <li><a class="dropdown-item" href="{{ '/services/blog-writing' | relative_url }}">Blog Writing</a></li>
+                            <li><a class="dropdown-item" href="{{ '/services/academic-writing' | relative_url }}">Academic Writing</a></li>
+                            <li><a class="dropdown-item" href="{{ '/services/marketing-copy' | relative_url }}">Marketing Copy</a></li>
+                            <li><a class="dropdown-item" href="{{ '/services/seo-content' | relative_url }}">SEO Content</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ '/services' | relative_url }}">All Services</a></li>
+                        </ul>
                     </li>
+                    
+                    <!-- Content Library (Replaces Blog) -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle {% if page.url contains '/blog/' or page.url contains '/insights/' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown">
+                            Content Library
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ '/blog/technical' | relative_url }}">Technical Articles</a></li>
+                            <li><a class="dropdown-item" href="{{ '/blog/non-technical' | relative_url }}">Non-Technical Articles</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ '/blog' | relative_url }}">All Articles</a></li>
+                        </ul>
+                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link {% if page.url == '/about/' %}active{% endif %}" href="{{ '/about' | relative_url }}">About</a>
                     </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link {% if page.url == '/contact/' %}active{% endif %}" href="{{ '/contact' | relative_url }}">Contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if page.url == '/disclaimer/' %}active{% endif %}" href="{{ '/disclaimer' | relative_url }}">Disclaimer</a>
-                    </li>
                 </ul>
+                
+                <!-- Call to Action Button -->
+                <div class="ms-3 d-none d-lg-block">
+                    <a href="{{ '/contact' | relative_url }}" class="btn btn-primary btn-sm">Get a Quote</a>
+                </div>
             </div>
         </div>
     </nav>

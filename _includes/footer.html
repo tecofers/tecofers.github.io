@@ -1,20 +1,112 @@
-<footer class="site-footer bg-dark text-white py-4 mt-5">
+<footer class="site-footer bg-dark text-white py-5 mt-5">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <div class="social-links mb-3">
+        <div class="row g-4">
+            <!-- Company Info -->
+            <div class="col-lg-4">
+                <div class="footer-brand d-flex align-items-center mb-3">
+                    <img src="{{ '/assets/images/Logo_Tecofers.png' | relative_url }}" alt="{{ site.title }} Logo" height="40" class="me-2">
+                    <span class="fs-5 fw-bold">Tecofers</span>
+                </div>
+                <p class="text-light mb-3">Professional content writing services tailored to your business needs.</p>
+                <div class="social-links d-flex gap-3 mb-3">
                     {% if site.facebook_username %}
-                    <a href="https://facebook.com/{{ site.facebook_username }}" class="text-white mx-2" target="_blank">Facebook</a>
+                    <a href="https://facebook.com/{{ site.facebook_username }}" class="social-icon" target="_blank" title="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
                     {% endif %}
                     {% if site.twitter_username %}
-                    <a href="https://twitter.com/{{ site.twitter_username }}" class="text-white mx-2" target="_blank">Twitter</a>
+                    <a href="https://twitter.com/{{ site.twitter_username }}" class="social-icon" target="_blank" title="Twitter">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
                     {% endif %}
                     {% if site.linkedin_username %}
-                    <a href="https://linkedin.com/in/{{ site.linkedin_username }}" class="text-white mx-2" target="_blank">LinkedIn</a>
+                    <a href="https://linkedin.com/in/{{ site.linkedin_username }}" class="social-icon" target="_blank" title="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
                     {% endif %}
+                    <a href="mailto:islaah.91@gmail.com" class="social-icon" target="_blank" title="Email">
+                        <i class="bi bi-envelope"></i>
+                    </a>
                 </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="col-lg-4">
+                <h5 class="mb-3">Quick Links</h5>
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="{{ '/' | relative_url }}" class="footer-link">Home</a></li>
+                            <li><a href="{{ '/services' | relative_url }}" class="footer-link">Services</a></li>
+                            <li><a href="{{ '/blog' | relative_url }}" class="footer-link">Blog</a></li>
+                            <li><a href="{{ '/about' | relative_url }}" class="footer-link">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="{{ '/contact' | relative_url }}" class="footer-link">Contact</a></li>
+                            <li><a href="{{ '/disclaimer' | relative_url }}" class="footer-link">Disclaimer</a></li>
+                            <li><a href="{{ '/privacy-policy' | relative_url }}" class="footer-link">Privacy Policy</a></li>
+                            <li><a href="{{ '/terms' | relative_url }}" class="footer-link">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Newsletter Signup -->
+            <div class="col-lg-4">
+                <h5 class="mb-3">Stay Updated</h5>
+                <p class="text-light mb-3">Subscribe to our newsletter for content writing tips and industry insights.</p>
+                <form class="mb-3">
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email" aria-label="Your email">
+                        <button class="btn btn-primary" type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <hr class="my-4 bg-secondary">
+        
+        <!-- Copyright Section -->
+        <div class="row">
+            <div class="col-md-6">
                 <p class="copyright mb-0">&copy; 2024 <a href="https://tecofers.com" class="text-decoration-none" style="color: #ff6347;">Tecofers</a>. All rights reserved.</p>
+            </div>
+            <div class="col-md-6">
+                <p class="text-end text-light mb-0 small">
+                    Empowering businesses with professional content solutions since {% assign founded_year = 2020 %}{{ founded_year }}
+                </p>
             </div>
         </div>
     </div>
 </footer>
+
+<style>
+.footer-link {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.footer-link:hover {
+    color: #ff6347;
+}
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s;
+}
+.social-icon:hover {
+    background-color: #ff6347;
+    color: white;
+    transform: translateY(-3px);
+}
+</style>

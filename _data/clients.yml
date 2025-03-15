@@ -9,6 +9,11 @@ current_clients:
     services: Technical content writing
     logo: linux-magazine.png
 
+  - name: Shop Online New York
+    industry: E-Commerce
+    services: Technical content writing
+    logo: shop-online-newyork.png
+
 past_clients:
   - name: HowToForge
     logo: howtoforge.png
