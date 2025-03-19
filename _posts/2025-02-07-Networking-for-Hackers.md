@@ -2,7 +2,7 @@
 layout: post
 title: "Networking for Hackers: How to Speak the Language of the Internet"
 date: 2025-02-07
-categories: [blog]
+categories: technical-articles
 tags: [Ethical Hacking]
 featured: true
 comments: true

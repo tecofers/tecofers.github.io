@@ -2,7 +2,7 @@
 layout: post
 title: "Boring Ideas, But Making $1,000,000 Dollars"
 date: 2025-02-01
-categories: [blog]
+categories: non-technical-articles
 tags: [Money Making]
 featured: true
 comments: true

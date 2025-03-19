@@ -3,7 +3,7 @@ layout: post
 title: " Pause a Shell Script"
 date: 2024-11-15
 author: Ali Imran Muneeri
-categories: [blog, commands]
+categories: technical-articles
 excerpt: In this comprehensive guide, we'll explore various methods to implement delays in shell scripts, with practical examples and best practices.
 ---
 

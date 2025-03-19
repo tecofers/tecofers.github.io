@@ -2,7 +2,7 @@
 layout: post
 title: "How The #1 Ethical Hacker BREAKS Into Companies 🤖"
 date: 2025-02-03
-categories: [blog]
+categories: technical-articles
 tags: [Hacking]
 featured: true
 comments: true

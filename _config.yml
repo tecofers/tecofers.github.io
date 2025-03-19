@@ -36,3 +36,22 @@ exclude:
   - vendor
   - .git
 #favicon: "/favicon.ico"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+# Default categories
+defaults:
+  -
+    scope:
+      path: "_posts"
+    values:
+      layout: "post"
+      author: "Admin"
+  -
+    scope:
+      path: "categories"
+    values:
+      layout: "blog"

@@ -3,7 +3,7 @@ layout: post
 title: "A Senior Developer's Journey Through Uncertainty"
 date: 2025-01-29
 author: Ali Imran Muneeri
-categories: [blog]
+categories: non-technical-articles
 featured: true
 comments: true
 ---

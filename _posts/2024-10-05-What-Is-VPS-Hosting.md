@@ -3,7 +3,7 @@ layout: post
 title: "What Is VPS Hosting?"
 date: 2024-11-05
 author: Ali Imran Muneeri
-categories: [blog, VPS]
+categories: non-technical-articles
 featured: true
 ---
 

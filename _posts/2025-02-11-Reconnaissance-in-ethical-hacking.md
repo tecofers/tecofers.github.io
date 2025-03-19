@@ -2,7 +2,7 @@
 layout: post
 title: "Reconnaissance 101: The Art of Gathering Intel Like a Pro Hacker"
 date: 2025-02-11
-categories: [blog]
+categories: technical-articles
 tags: [Ethical Hacking]
 featured: False
 comments: true

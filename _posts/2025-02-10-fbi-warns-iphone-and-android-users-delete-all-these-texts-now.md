@@ -2,7 +2,7 @@
 layout: post
 title: "Delete Scam Texts Now: How to Survive the Fake Toll Phishing Attack and Why You Must Care!"
 date: 2025-02-10
-categories: [blog]
+categories: non-technical-articles
 tags: [Ethical Hacking]
 featured: true
 comments: true

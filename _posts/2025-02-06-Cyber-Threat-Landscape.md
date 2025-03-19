@@ -2,7 +2,7 @@
 layout: post
 title: "Cyber Apocalypse 2025: How AI Will Rewrite the Rules of Digital Warfare"
 date: 2025-02-06
-categories: [blog]
+categories: technical-articles
 tags: [Cybersecurity]
 featured: true
 comments: true

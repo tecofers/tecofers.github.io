@@ -16,7 +16,7 @@ layout: default
                     <span class="categories">
                         <i class="bi bi-folder"></i> 
                         {% for category in page.categories %}
-                        <a href="{{ site.baseurl }}/categories/{{ category | slugify }}" class="category text-decoration-none">{{ category }}</a>
+                        <a href="{{ site.baseurl }}/content-library/{{ category | slugify }}" class="category text-decoration-none">{{ category }}</a>
                         {% unless forloop.last %}, {% endunless %}
                         {% endfor %}
                     </span>

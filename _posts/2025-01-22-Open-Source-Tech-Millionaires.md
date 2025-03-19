@@ -3,7 +3,7 @@ layout: post
 title: "The Open Source Paradox: How Giving Away Code Created Today's Tech Millionaires"
 date: 2025-01-22
 author: Ali Imran Muneeri
-categories: [blog]
+categories: non-technical-articles
 featured: true
 ---
 

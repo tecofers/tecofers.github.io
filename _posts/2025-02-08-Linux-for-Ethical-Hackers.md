@@ -2,7 +2,7 @@
 layout: post
 title: "Linux for Hackers: Why It’s the Ultimate Hacking OS"
 date: 2025-02-08
-categories: [blog]
+categories: technical-articles
 tags: [Ethical Hacking]
 featured: true
 comments: true

@@ -2,7 +2,7 @@
 layout: post
 title: "The AI Cyber Apocalypse: How Artificial Intelligence is Weaponizing Digital Attacks"
 date: 2025-02-06
-categories: [blog]
+categories: technical-articles
 tags: [Hacking]
 featured: true
 comments: true

@@ -1,3 +1,10 @@
+---
+layout: post
+title: "Essential Git Commands for Developers"
+date: 2024-11-05
+author: Ali Imran Muneeri
+categories: technical-articles
+---
 # Essential Git Commands for Developers
 
 Here's a collection of commonly used Git commands that every developer should know.

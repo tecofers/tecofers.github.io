@@ -35,6 +35,25 @@
                             <li><a class="dropdown-item" href="{{ '/services' | relative_url }}">All Services</a></li>
                         </ul>
                     </li>
+
+                    <!-- Portfolio Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle {% if page.url contains '/portfolio/' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown">
+                            Portfolio
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ '/portfolio/technical-articles' | relative_url }}">Technical Articles</a></li>
+                            
+                            <li><a class="dropdown-item" href="{{ '/portfolio/blog-writing' | relative_url }}">Blog Writing</a></li>
+
+                            <li><a class="dropdown-item" href="{{ '/portfolio/whitepapers' | relative_url }}">Whitepapers</a></li>
+
+                            <li><a class="dropdown-item" href="{{ '/portfolio/case-studies' | relative_url }}">Case Studies</a></li>
+
+                            <li><a class="dropdown-item" href="{{ '/portfolio/marketing-articles' | relative_url }}">Marketing Content</a></li>
+                                                     
+                        </ul>
+                    </li>
                     
                     <!-- Content Library (Replaces Blog) -->
                     <li class="nav-item dropdown">
@@ -42,10 +61,10 @@
                             Content Library
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ '/blog/technical' | relative_url }}">Technical Articles</a></li>
-                            <li><a class="dropdown-item" href="{{ '/blog/non-technical' | relative_url }}">Non-Technical Articles</a></li>
+                            <li><a class="dropdown-item" href="{{ '/content-library/technical-articles' | relative_url }}">Technical Articles</a></li>
+                            <li><a class="dropdown-item" href="{{ '/content-library/non-technical-articles' | relative_url }}">Non-Technical Articles</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{ '/blog' | relative_url }}">All Articles</a></li>
+                            <li><a class="dropdown-item" href="{{ '/content-library/all-articles' | relative_url }}">All Articles</a></li>
                         </ul>
                     </li>
                     

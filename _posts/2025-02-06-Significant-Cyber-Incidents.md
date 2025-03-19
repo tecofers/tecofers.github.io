@@ -2,7 +2,7 @@
 layout: post
 title: "Navigating the Cyber Storm: Major Hacks from April 2022 to November 2024"
 date: 2025-02-06
-categories: [blog]
+categories: technical-articles
 tags: [Cybersecurity]
 featured: true
 comments: true

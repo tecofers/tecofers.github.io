@@ -2,7 +2,7 @@
 layout: post
 title: "DeepSeek AI: China’s Rising Star in the Global AI Race"
 date: 2025-02-04
-categories: [blog]
+categories: non-technical-articles
 tags: [DeepSeek]
 featured: true
 comments: true

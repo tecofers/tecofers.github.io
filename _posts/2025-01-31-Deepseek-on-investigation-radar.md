@@ -3,7 +3,7 @@ layout: post
 title: "Microsoft and OpenAI Investigate Data Security Concerns Involving DeepSeek"
 date: 2025-01-29
 author: Ali Imran Muneeri
-categories: [blog]
+categories: non-technical-articles
 featured: true
 comments: true
 ---

@@ -1,45 +1,39 @@
 ---
 layout: default
-title: Blog
+title: Blog 
 ---
-<div class="blog">
+<div class="container py-5">
     <h1 class="mb-4">{{ page.title }}</h1>
-
     <div class="row">
-        <div class="col-md-8">
-            <section class="recent-posts">
-                <h2 class="mb-3">Recent Posts</h2>
-                {% for post in site.posts limit:3 %}
+        <div class="col-md-12">
+            <section class="posts">
+                {% assign filtered_posts = '' | split: '' %}
+                {% for post in site.posts %}
+                    {% if page.category %}
+                        {% if post.categories contains page.category or post.categories == page.category %}
+                            {% assign filtered_posts = filtered_posts | push: post %}
+                        {% endif %}
+                    {% else %}
+                        {% assign filtered_posts = filtered_posts | push: post %}
+                    {% endif %}
+                {% endfor %}
+
+                {% for post in filtered_posts %}
                 <article class="post-preview card mb-4">
                     <div class="card-body">
                         <h3 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
                         <div class="post-meta text-muted">
                             <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
+                            {% if post.categories %}
+                            <span class="category ml-2">
+                                • Category: {% if post.categories.first %}{{ post.categories | first }}{% else %}{{ post.categories }}{% endif %}
+                            </span>
+                            {% endif %}
                         </div>
                         <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
                         <a href="{{ post.url | relative_url }}" class="btn btn-primary">Read More</a>
                     </div>
                 </article>
-                {% endfor %}
-            </section>
-        </div>
-
-        <div class="col-md-4">
-            <section class="featured-posts">
-                <h2 class="mb-3">Featured Posts</h2>
-                {% for post in site.posts %}
-                    {% if post.featured %}
-                    <article class="featured-post card mb-4">
-                        <div class="card-body">
-                            <h3 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                            <div class="post-meta text-muted">
-                                <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
-                            </div>
-                            <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-                            <a href="{{ post.url | relative_url }}" class="btn btn-outline-primary">Read More</a>
-                        </div>
-                    </article>
-                    {% endif %}
                 {% endfor %}
             </section>
         </div>

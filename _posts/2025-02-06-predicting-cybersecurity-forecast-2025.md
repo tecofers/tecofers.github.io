@@ -2,7 +2,7 @@
 layout: post
 title: "2025 Cybersecurity Forecast: What may you Expect?"
 date: 2025-02-06
-categories: [blog]
+categories: non-technical-articles
 tags: [Cybersecurity]
 featured: true
 comments: true

@@ -2,7 +2,7 @@
 layout: post
 title: "Cybersecurity 2025: The Perfect Storm of Digital Threats Revealed"
 date: 2025-02-06
-categories: [blog]
+categories: technical-articles
 tags: [Hacking]
 featured: true
 comments: true

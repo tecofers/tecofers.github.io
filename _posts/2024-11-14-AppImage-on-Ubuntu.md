@@ -2,7 +2,7 @@
 layout: post
 title: "AppImage on Ubuntu"
 date: 2024-11-14
-categories: [blog, commands]
+categories: technical-articles
 tags: [unix, commands, terminal]
 #featured: true
 excerpt: "In this tutorial, we see how to install AppImage on Ubuntu"

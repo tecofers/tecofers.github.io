@@ -3,7 +3,7 @@ layout: post
 title: "Essential Linux Commands to Understand Your System"
 date: 2024-11-05
 author: Ali Imran Muneeri
-categories: [blog, commands]
+categories: technical-articles
 featured: true
 ---
 

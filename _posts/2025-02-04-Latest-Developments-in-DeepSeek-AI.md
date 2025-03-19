@@ -2,7 +2,7 @@
 layout: post
 title: "Latest Developments in DeepSeek AI: What’s New and Why It Matters"
 date: 2025-02-04
-categories: [blog]
+categories: technical-articles
 tags: [DeepSeek]
 featured: true
 comments: true

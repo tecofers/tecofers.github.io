@@ -2,7 +2,7 @@
 layout: post
 title: "The Dark Side of AI: How AI-Powered Cyberattacks Threaten Us All"
 date: 2025-02-06
-categories: [blog]
+categories: technical-articles
 tags: [Hacking]
 featured: true
 comments: true

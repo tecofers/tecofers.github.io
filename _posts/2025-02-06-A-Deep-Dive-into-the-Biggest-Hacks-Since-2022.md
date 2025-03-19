@@ -2,7 +2,7 @@
 layout: post
 title: "The Wild World of Cyberattacks: A Deep Dive into the Biggest Hacks Since 2022"
 date: 2025-02-06
-categories: [blog]
+categories: non-technical-articles
 tags: [Cybersecurity]
 featured: true
 comments: true

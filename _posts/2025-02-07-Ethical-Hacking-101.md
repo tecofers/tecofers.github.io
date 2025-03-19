@@ -2,7 +2,7 @@
 layout: post
 title: "Ethical Hacking 101: Breaking Into the World of Cybersecurity (Legally!)"
 date: 2025-02-07
-categories: [blog]
+categories: non-technical-articles
 tags: [Ethical Hacking]
 featured: False
 comments: true

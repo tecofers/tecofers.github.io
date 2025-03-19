@@ -2,7 +2,7 @@
 layout: post
 title: "DeepSeek Token Timeline: A Comprehensive Journey Through Its Evolution"
 date: 2025-02-01
-categories: [blog]
+categories: non-technical-articles
 tags: [DeepSeek]
 featured: true
 comments: true
