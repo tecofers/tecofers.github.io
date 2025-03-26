@@ -35,6 +35,10 @@ title: Marketing Articles
                 <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active"></button>
                 <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="1"></button>
                 <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="4"></button>
+                <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="5"></button>
+                <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="6"></button>
             </div>
             
             <!-- Carousel items -->
@@ -49,16 +53,16 @@ title: Marketing Articles
                     <img src="{{ '/assets/images/ads/carousel/3.png' | relative_url }}" class="d-block w-100" alt="Image 3">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ '/assets/images/ads/carousel/4.png' | relative_url }}" class="d-block w-100" alt="Image 3">
+                    <img src="{{ '/assets/images/ads/carousel/4.png' | relative_url }}" class="d-block w-100" alt="Image 4">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ '/assets/images/ads/carousel/5.png' | relative_url }}" class="d-block w-100" alt="Image 3">
+                    <img src="{{ '/assets/images/ads/carousel/5.png' | relative_url }}" class="d-block w-100" alt="Image 5">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ '/assets/images/ads/carousel/6.png' | relative_url }}" class="d-block w-100" alt="Image 3">
+                    <img src="{{ '/assets/images/ads/carousel/6.png' | relative_url }}" class="d-block w-100" alt="Image 6">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ '/assets/images/ads/carousel/7.png' | relative_url }}" class="d-block w-100" alt="Image 3">
+                    <img src="{{ '/assets/images/ads/carousel/7.png' | relative_url }}" class="d-block w-100" alt="Image 7">
                 </div>
             </div>
             
