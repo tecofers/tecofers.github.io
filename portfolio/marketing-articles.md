@@ -24,3 +24,53 @@ title: Marketing Articles
 **3. Bakery Ad**
 
 <img src="/assets/images/ads/bakery-ad.png" alt="Bakery Services" class="img-fluid">
+
+**4. Portfolio Ad**
+
+<section class="py-5">
+    <div class="container">
+        <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Carousel indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="2"></button>
+            </div>
+            
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ '/assets/images/ads/carousel/1.png' | relative_url }}" class="d-block w-100" alt="Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ '/assets/images/ads/carousel/2.png' | relative_url }}" class="d-block w-100" alt="Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ '/assets/images/ads/carousel/3.png' | relative_url }}" class="d-block w-100" alt="Image 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ '/assets/images/ads/carousel/4.png' | relative_url }}" class="d-block w-100" alt="Image 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ '/assets/images/ads/carousel/5.png' | relative_url }}" class="d-block w-100" alt="Image 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ '/assets/images/ads/carousel/6.png' | relative_url }}" class="d-block w-100" alt="Image 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ '/assets/images/ads/carousel/7.png' | relative_url }}" class="d-block w-100" alt="Image 3">
+                </div>
+            </div>
+            
+            <!-- Carousel controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
