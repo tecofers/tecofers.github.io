@@ -25,12 +25,12 @@ past_clients:
     logo: linuxhint.png    
 
 testimonials:
-  - quote: "Their technical writing expertise significantly improved our API documentation, making it more accessible to our developers."
-    author: John Smith
-    position: CTO
-    company: TechStartup
+  - quote: "I built an instance of KVM/Debian to reproduced the technical article published by Ali Imram and everything works properly without needing to do any extra searches on internet.."
+    author: Sandro Regis Cardoso on LinkedIn
+    position: Senior Software Development Engineer
+    company: Credit Suisse
     
-  - quote: "Outstanding medical content that perfectly balanced technical accuracy with readability."
-    author: Sarah Johnson
-    position: Product Manager
-    company: HealthTech
+  - quote: "I’ve had the pleasure of knowing Ali Imran both personally and professionally, and I can confidently say he is an expert in Linux administration and remote working setups. His deep technical knowledge, combined with a problem-solving mindset, makes him an invaluable asset in any IT environment..."
+    author: Imran Qureshi on LinkedIn
+    position: Lead Generation Expert
+    company: Codewise Infotech
