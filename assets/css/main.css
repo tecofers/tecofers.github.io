@@ -5,6 +5,7 @@
     --text-color: #333;
     --light-gray: #f4f4f4;
     --border-color: #ddd;
+    --accent-color: #0563bb;
 }
 
 /* Custom styles for posts */
@@ -22,6 +23,15 @@
     width: auto;
 }
 
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: rgba(33, 37, 41, 0.95);
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-top: 0.5rem;
+  }
+}
+
 /* Optional: Add hover effect */
 .navbar-brand:hover {
     opacity: 0.8;
@@ -32,14 +42,52 @@
     padding-left: 10px;
 }
 
+/* Transparent header styling */
+.site-header {
+  position: fixed; /* Change from absolute to fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(33, 37, 41, 0.8); /* Semi-transparent background */
+}
+
+.navbar {
+  background-color: rgba(33, 37, 41, 0.7) !important; /* Semi-transparent instead of fully transparent */
+  padding: 1rem 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9); /* Brighter text */
+  font-weight: 500; /* Slightly bolder */
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: 600;
+}
+
+/* Optional: Add a semi-transparent background when scrolling down */
+.navbar.scrolled {
+  background-color: rgba(33, 37, 41, 0.95) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 /* Optional: Make logo responsive */
 @media (max-width: 768px) {
     .navbar-brand img {
         max-height: 30px; /* Smaller logo on mobile devices */
     }
 }
-
-/* Add any additional custom styles that don't conflict with Bootstrap */
 
 /* Optional: Add hover effects to social media icons */
 .social-links a:hover {
@@ -51,29 +99,143 @@
     border-color: #80bdff;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
-/* Hero Section */
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+/* Replace or update the existing hero section CSS */
+/* Hero section styling fix */
 .hero {
-    background-image: url('../images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height: 500px;
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* This ensures full viewport height */
+  padding: 0; /* Remove padding that might be restricting size */
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Prevent image overflow */
 }
 
-.hero-overlay {
-    background: rgba(0, 0, 0, 0.6);
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures the image covers the area */
+  z-index: 1;
+  transition: transform 0.5s ease;
 }
 
-.vh-75 {
-    height: 50vh;
+.hero:hover img {
+  transform: scale(1.05);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 2rem; /* Add padding for spacing */
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Larger text for hero headings */
+.hero h2 {
+  font-size: 4.5rem; /* Increased from the default */
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 2.5rem; /* Increased from the default */
+  margin: 0.5rem 0 2rem 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 3rem;
+  }
+  
+  .hero p {
+    font-size: 1.8rem;
+  }
+}
+
+.typed {
+  color: #ffc107; /* A nice gold color that stands out */
+  font-weight: bold;
+}
+
+.typed-cursor {
+  color: #ffc107;
+}
+
+@keyframes typedjsBlink {
+    50% {
+        opacity: 0.0;
+    }
+}
+
+@-webkit-keyframes typedjsBlink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Fix for page content overlapping with fixed/absolute header */
+body {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Extra padding for pages with page titles */
+body.has-page-title {
+  padding-top: 100px; /* More padding for pages with titles */
+}
+
+/* Special adjustment for the home page (no extra padding needed) */
+body.home {
+  padding-top: 0;
+}
+
+body.is-homepage .main-content {
+  padding-top: 0;
+}
+
+body.is-homepage .hero {
+  margin-top: 0;
+}
+
+.main-content {
+  padding-top: 80px; /* Adjust based on your navbar height */
 }
 
 /* Card Styles */
 .card {
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    border: none;
+    overflow: hidden;
 }
 
 .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card .bi {
+    transition: all 0.3s ease;
+}
+
+.card:hover .bi {
+    transform: scale(1.1);
 }
 
 /* Grayscale effect for past clients */
@@ -99,7 +261,218 @@
     transform: translateY(-50%);
 }
 
-/* Responsive adjustments */
+/* Testimonial Enhancements */
+.carousel-item {
+  transition: all 0.5s ease;
+}
+
+.blockquote {
+  position: relative;
+}
+
+.blockquote:before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .blockquote:before {
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Resume Section Styles
+--------------------------------------------------------------*/
+.resume.section {
+  padding-top: 120px; /* Adjust based on your header height */
+  padding-bottom: 80px;
+}
+
+.resume-item {
+  transition: all 0.3s ease;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-left: 4px solid transparent;
+}
+
+.resume-item:hover {
+  background: rgba(255, 255, 255, 1);
+  border-left-color: var(--accent-color);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.resume-title {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.resume-title:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(45deg, var(--accent-color), #0056b3);
+  transition: width 0.3s ease;
+}
+
+.resume-title:hover:after {
+  width: 100px;
+}
+
+.section-title {
+  padding-bottom: 60px;
+}
+
+.section-title h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.section-title h2:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(45deg, var(--accent-color), #0056b3);
+}
+
+/* Animation for skill items */
+.resume-item ul li {
+  transition: all 0.2s ease;
+  padding: 5px 0;
+}
+
+.resume-item ul li:hover {
+  color: var(--accent-color);
+  padding-left: 10px;
+}
+
+/* Contact info styling */
+.resume-item.pb-0 ul li {
+  font-weight: 500;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.resume-item.pb-0 ul li:hover {
+  color: var(--accent-color);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Button Enhancements */
+.btn {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+.btn-outline-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+}
+
+/* Counter Animation */
+.display-1 {
+  background: linear-gradient(45deg, var(--accent-color), #0056b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Timeline Enhancements for About Page */
+.timeline {
+  position: relative;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(45deg, var(--accent-color), #0056b3);
+  transform: translateX(-50%);
+}
+
+/* Navigation Enhancements */
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover:after {
+  width: 100%;
+}
+
+/* Utility Classes */
+.text-gradient {
+  background: linear-gradient(45deg, var(--accent-color), #0056b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shadow-hover {
+  transition: box-shadow 0.3s ease;
+}
+
+.shadow-hover:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Loading Animation */
+.loading {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.loading.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .hero {
         min-height: 400px;
@@ -108,5 +481,39 @@
     .carousel-control-prev,
     .carousel-control-next {
         display: none;
+    }
+    
+    .timeline:before {
+        left: 30px;
+    }
+    
+    .resume.section {
+        padding-top: 100px;
+    }
+    
+    .resume-item {
+        padding: 15px;
+    }
+    
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .display-1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .resume-item {
+        padding: 15px;
+    }
+    
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .display-1 {
+        font-size: 3rem;
     }
 }
