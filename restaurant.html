@@ -1,0 +1,189 @@
+---
+layout: default
+title: NiceRestaurant
+description: "Discover a journey of flavors at our exquisite restaurant. Immerse yourself in a delightful dining experience crafted with passion and precision."
+---
+
+<link rel="stylesheet" href="/restaurant/assets/css/main.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+<!-- Hero Section -->
+<section id="hero" class="hero section">
+  <div class="container-fluid hero-container">
+    <div class="row g-0 align-items-center">
+      <div class="col-lg-6 content-col">
+        <div class="content-wrapper">
+          <div class="status-badge">Reservations Open</div>
+          <h2>Savor the Moment, One Bite at a Time</h2>
+          <p>{{ page.description }}</p>
+
+          <div class="opening-hours">
+            <i class="bi bi-clock"></i>
+            <span>Open Daily: 11am - 10pm</span>
+          </div>
+
+          <div class="btn-group">
+            <a href="#book-a-table" class="btn btn-book">Book a Table</a>
+            <a href="#menu" class="btn btn-menu">Explore Our Menu</a>
+          </div>
+
+          <div class="social-links">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 swiper-col">
+        <div class="image-gallery">
+          <img src="/restaurant/assets/img/restaurant/misc-square-1.webp" class="img-fluid" alt="Restaurant Ambience">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about section">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-6">
+        <div class="about-content">
+          <h3>Our Culinary Journey</h3>
+          <p class="fst-italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+          <p>Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+
+          <div class="chef-signature mt-4">
+            <div class="row align-items-center">
+              <div class="col-auto">
+                <img src="/restaurant/assets/img/restaurant/chef-1.webp" class="chef-avatar rounded-circle" alt="Chef Portrait">
+              </div>
+              <div class="col">
+                <p class="chef-message mb-2">"Cooking is a language through which all the following properties may be expressed: harmony, creativity, happiness, beauty, poetry, complexity, magic, humor, provocation and culture."</p>
+                <p class="chef-name">Executive Chef</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="about-image-wrapper">
+          <img src="/restaurant/assets/img/restaurant/showcase-4.webp" class="img-fluid main-image shadow" alt="Restaurant Interior">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Menu Section -->
+<section id="menu" class="menu section">
+  <div class="container">
+    <div class="section-title text-center mb-5">
+      <h2>Our Menu</h2>
+      <p>Discover our carefully crafted dishes</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="menu-item">
+          <img src="/restaurant/assets/img/restaurant/starter-2.webp" class="img-fluid" alt="Starter">
+          <h4>Appetizers</h4>
+          <p>Delicious starters to begin your meal</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="menu-item">
+          <img src="/restaurant/assets/img/restaurant/main-3.webp" class="img-fluid" alt="Main Course">
+          <h4>Main Courses</h4>
+          <p>Our signature dishes and specialties</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="menu-item">
+          <img src="/restaurant/assets/img/restaurant/dessert-2.webp" class="img-fluid" alt="Dessert">
+          <h4>Desserts</h4>
+          <p>Sweet endings to your perfect meal</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="menu-item">
+          <img src="/restaurant/assets/img/restaurant/drink-3.webp" class="img-fluid" alt="Beverages">
+          <h4>Beverages</h4>
+          <p>Refreshing drinks and fine wines</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact section">
+  <div class="container">
+    <div class="section-title text-center mb-5">
+      <h2>Contact Us</h2>
+      <p>Get in touch for reservations</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="contact-info">
+          <h4>Restaurant Information</h4>
+          <p><i class="bi bi-geo-alt"></i> 1234 Main Street, Suite 100, Boston, MA 02110</p>
+          <p><i class="bi bi-telephone"></i> +1 (617) 555-1234</p>
+          <p><i class="bi bi-envelope"></i> info@nicerestaurant.com</p>
+          <p><i class="bi bi-clock"></i> Monday - Friday: 11:00 AM - 11:00 PM</p>
+          <p><i class="bi bi-clock"></i> Saturday - Sunday: 10:00 AM - 12:00 AM</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="reservation-form">
+          <h4>Make a Reservation</h4>
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="mb-3">
+              <input type="tel" class="form-control" placeholder="Your Phone" required>
+            </div>
+            <div class="mb-3">
+              <input type="date" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <select class="form-control" required>
+                <option>Select Time</option>
+                <option>6:00 PM</option>
+                <option>7:00 PM</option>
+                <option>8:00 PM</option>
+                <option>9:00 PM</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <select class="form-control" required>
+                <option>Number of Guests</option>
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option>3 Guests</option>
+                <option>4 Guests</option>
+                <option>5+ Guests</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Book Table</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
