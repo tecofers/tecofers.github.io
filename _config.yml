@@ -35,6 +35,7 @@ exclude:
   - node_modules
   - vendor
   - .git
+  - restaurant/
 #favicon: "/favicon.ico"
 
 plugins:
