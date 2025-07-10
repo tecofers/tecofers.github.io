@@ -1,0 +1,64 @@
+# Site settings
+title: NiceRestaurant
+email: info@nicerestaurant.com
+description: >-
+  Discover a journey of flavors at our exquisite restaurant. 
+  Immerse yourself in a delightful dining experience crafted with passion and precision.
+baseurl: "/restaurant" # the subpath of your site, e.g. /blog
+url: "https://tecofers.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: nicerestaurant
+github_username:  nicerestaurant
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - Readme.txt
+  - forms/
+
+# Collections
+collections:
+  menu_items:
+    output: false
+  chefs:
+    output: false
+  events:
+    output: false
+
+# Site data
+restaurant:
+  name: "NiceRestaurant"
+  tagline: "Savor the Moment, One Bite at a Time"
+  phone: "+1 (617) 555-1234"
+  email: "info@nicerestaurant.com"
+  address: "1234 Main Street, Suite 100, Boston, MA 02110"
+  hours:
+    weekdays: "Monday - Friday: 11:00 AM - 11:00 PM"
+    weekends: "Saturday - Sunday: 10:00 AM - 12:00 AM"
+  social:
+    facebook: "#"
+    instagram: "#"
+    twitter: "#"
+    youtube: "#"
+
+# Build settings
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Permalink format
+permalink: /:categories/:year/:month/:day/:title/
+
