@@ -15,33 +15,7 @@ title: Home
     </div>
 </section>
 
-<!-- Services Section -->
-<section class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">My Writing Services</h2>
-        <div class="row g-4">
-            {% for service in site.data.services %}
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ forloop.index | times: 100 | plus: 100 }}">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body d-flex flex-column">
-                        <div class="mb-3" data-aos="zoom-in" data-aos-delay="{{ forloop.index | times: 100 | plus: 200 }}">
-                            <i class="bi {{ service.icon }} text-primary display-5"></i>
-                        </div>
-                        <h5 class="card-title">{{ service.title }}</h5>
-                        <p class="card-text flex-grow-1">{{ service.description }}</p>
-                        <div class="mt-auto">
-                            <a href="{{ service.url | relative_url }}" class="btn btn-outline-primary stretched-link">
-                                Learn More 
-                                <i class="bi bi-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
+
 
 <!-- Clients Section -->
 <section class="py-5 bg-light">
@@ -51,7 +25,7 @@ title: Home
         <!-- Current Collaborations -->
         <div class="row mb-5">
             <div class="col-12">
-                <h3 class="h5 text-center mb-4" data-aos="fade-up" data-aos-delay="200">Current Collaborations</h3>
+                <h3 class="h5 text-center mb-4" data-aos="fade-up" data-aos-delay="200">Client Portfolio</h3>
             </div>
             {% for client in site.data.clients.current_clients %}
             <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="{{ forloop.index | times: 150 | plus: 250 }}">
@@ -61,6 +35,7 @@ title: Home
                              alt="{{ client.name }}" 
                              class="img-fluid mb-3"
                              style="max-height: 60px;"
+                             loading="lazy"
                              data-aos="zoom-in" data-aos-delay="{{ forloop.index | times: 150 | plus: 350 }}">
                         <h4 class="h6 mb-2">{{ client.name }}</h4>
                         <p class="small text-muted mb-2">{{ client.industry }}</p>
@@ -71,68 +46,36 @@ title: Home
             {% endfor %}
         </div>
 
-        <!-- Past Collaborations -->
-        <div class="row mb-5">
-            <div class="col-12">
-                <h3 class="h5 text-center mb-4" data-aos="fade-up" data-aos-delay="100">Previous Collaborations</h3>
-            </div>
-            <div class="col-12" data-aos="fade-up" data-aos-delay="200">
-                <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-3 justify-content-center">
-                    {% for client in site.data.clients.past_clients %}
-                    <div class="col text-center" data-aos="fade-in" data-aos-delay="{{ forloop.index | times: 100 | plus: 300 }}">
-                        <img src="{{ '/assets/images/clients/' | append: client.logo | relative_url }}" 
-                             alt="{{ client.name }}" 
-                             class="img-fluid grayscale"
-                             style="max-height: 40px;">
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
+</div>
+</section>
 
-        <!-- Testimonials -->
-        <div class="row justify-content-center">
-            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        {% for testimonial in site.data.clients.testimonials %}
-                        <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                            <div class="card border-0 shadow-sm">
-                                <div class="card-body p-5 text-center">
-                                    <i class="bi bi-quote display-3 text-primary mb-3" data-aos="zoom-in" data-aos-delay="200"></i>
-                                    <blockquote class="mb-4" data-aos="fade-up" data-aos-delay="300">
-                                        <p class="lead mb-0">{{ testimonial.quote }}</p>
-                                    </blockquote>
-                                    <footer class="blockquote-footer" data-aos="fade-up" data-aos-delay="400">
-                                        <strong>{{ testimonial.author }}</strong>
-                                        <br>
-                                        <cite title="{{ testimonial.company }}">
-                                            {{ testimonial.position }}, {{ testimonial.company }}
-                                        </cite>
-                                    </footer>
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
+        <!-- Testimonials Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">What My Clients Say</h2>
+        <div class="row g-4">
+            {% for testimonial in site.data.clients.testimonials %}
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="{{ forloop.index | times: 100 }}">
+                <div class="card h-100 border-0 shadow-sm testimonial-card">
+                    <div class="card-body p-4">
+                        <i class="bi bi-quote display-4 text-primary mb-3"></i>
+                        <blockquote class="blockquote mb-0">
+                            <p class="mb-3">{{ testimonial.quote }}</p>
+                            <footer class="blockquote-footer">
+                                <strong>{{ testimonial.author }}</strong>
+                                <cite title="{{ testimonial.company }}">, {{ testimonial.position }}, {{ testimonial.company }}</cite>
+                            </footer>
+                        </blockquote>
                     </div>
-                    {% if site.data.clients.testimonials.size > 1 %}
-                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                    {% endif %}
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 </section>
 
 <!-- Why Choose Us Section -->
-<section class="py-5">
+<section class="py-5 bg-light">
     <div class="container">
         <h2 class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">Why Choose Me?</h2>
         <div class="row g-4">
@@ -152,11 +95,11 @@ title: Home
 </section>
 
 <!-- Projects Completed Section -->
-<section class="py-5 bg-light">
+<section class="py-5">
     <div class="container text-center">
         <h2 class="mb-4" data-aos="fade-up" data-aos-delay="100">Projects Completed</h2>
         <div class="display-1 fw-bold text-primary mb-3" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">200+</div>
-        <p class="lead" data-aos="fade-up" data-aos-delay="300">Successfully delivered projects and counting</p>
+        <p class="lead" data-aos="fade-up" data-aos-delay="300">Successfully delivered projects and counting...</p>
     </div>
 </section>
 
@@ -166,8 +109,8 @@ title: Home
         <div class="row justify-content-center text-center">
             <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="mb-4" data-aos="fade-up" data-aos-delay="200">Ready to Start Your Project?</h2>
-                <p class="lead mb-4" data-aos="fade-up" data-aos-delay="300">Let's create compelling content that drives results.</p>
-                <a href="{{ '/contact' | relative_url }}" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="400">
+                <p class="lead mb-4" data-aos="fade-up" data-aos-delay="300">Explore our services to help your business grow.</p>
+                <a href="{{ '/services' | relative_url }}" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="400">
                     Get Started
                     <i class="bi bi-arrow-right ms-2"></i>
                 </a>

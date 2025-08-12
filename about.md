@@ -6,6 +6,12 @@ permalink: /about/
 
 ## How it Started?
 
+<div class="text-center mt-5">
+    <a href="/path/to/your/resume.pdf" class="btn btn-primary btn-lg" download>
+        <i class="bi bi-download me-2"></i> Download My Resume
+    </a>
+</div>
+
 <!-- Bootstrap v5.3.3 About Timeline Section -->
 <section class="py-5" id="about">
   <div class="container" data-aos="fade-up" data-aos-delay="100">

@@ -1,0 +1,23 @@
+{
+  "name": "tecofers-test2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "tailwindcss": "^4.1.11"
+  },
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/css/services-input.css -o ./assets/css/services-output.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tecofers/tecofers.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tecofers/tecofers.github.io/issues"
+  },
+  "homepage": "https://github.com/tecofers/tecofers.github.io#readme"
+}

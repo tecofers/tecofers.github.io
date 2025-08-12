@@ -1,12 +1,11 @@
 ---
-layout: default
+layout: legal
 title: Disclaimer
 permalink: /disclaimer/
 ---
 
-# Disclaimer
 
-*Last Updated: March 15, 2025*
+*Last Updated: August 07, 2025*
 
 ## Website Disclaimer
 

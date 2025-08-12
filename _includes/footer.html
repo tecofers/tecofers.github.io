@@ -5,9 +5,9 @@
             <div class="col-lg-4">
                 <div class="footer-brand d-flex align-items-center mb-3">
                     <img src="{{ '/assets/images/Logo_Tecofers.png' | relative_url }}" alt="{{ site.title }} Logo" height="40" class="me-2">
-                    <span class="fs-5 fw-bold">Tecofers</span>
+                    <span class="fs-5 fw-bold"><a href="\">Tecofers</a></span>
                 </div>
-                <p class="text-light mb-3">Professional content writing services tailored to your business needs.</p>
+                <p class="text-light mb-3">Digital Services Tailored To Your Business Needs.</p>
                 <div class="social-links d-flex gap-3 mb-3">
                     {% if site.facebook_username %}
                     <a href="https://facebook.com/{{ site.facebook_username }}" class="social-icon" target="_blank" title="Facebook">
@@ -57,12 +57,24 @@
             <div class="col-lg-4">
                 <h5 class="mb-3">Stay Updated</h5>
                 <p class="text-light mb-3">Subscribe to our newsletter for content writing tips and industry insights.</p>
-                <form class="mb-3">
-                    <div class="input-group">
-                        <input type="email" class="form-control" placeholder="Your email" aria-label="Your email">
-                        <button class="btn btn-primary" type="submit">Subscribe</button>
-                    </div>
+
+        <form action="https://formspree.io/f/mrblrlvq" method="POST" class="mb-3">
+        <div class="input-group">
+                    <input 
+                        type="email" 
+                        name="email" 
+                        required
+                        class="form-control"
+                        placeholder="Your email" 
+                        aria-label="Your email">
+                    <button 
+                        type="submit" 
+                        class="btn btn-primary">
+                        Subscribe
+                    </button>
+        </div>
                 </form>
+
             </div>
         </div>
         
@@ -71,7 +83,7 @@
         <!-- Copyright Section -->
         <div class="row">
             <div class="col-md-6">
-                <p class="copyright mb-0">&copy; 2024 <a href="https://tecofers.com" class="text-decoration-none" style="color: #ff6347;">Tecofers</a>. All rights reserved.</p>
+                <p class="copyright mb-0">&copy; 2025 <a href="https://tecofers.com" class="text-decoration-none" style="color: #ff6347;">Tecofers</a>. All rights reserved.</p>
             </div>
             <div class="col-md-6">
                 <p class="text-end text-light mb-0 small">

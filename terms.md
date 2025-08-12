@@ -1,12 +1,11 @@
 ---
-layout: default
+layout: legal
 title: Terms of Service
 permalink: /terms/
 ---
 
-# Terms of Service
 
-*Last Updated: March 15, 2025*
+*Last Updated: August 07, 2025*
 
 ## Welcome to Tecofers
 

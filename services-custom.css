@@ -1,0 +1,64 @@
+/* Custom Styles for services-bootstrap.html */
+
+/* Use Inter font if available */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Chart Container styling */
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    max-height: 450px;
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        height: 300px;
+        max-height: 350px;
+    }
+}
+
+/* Service Button Styling */
+.service-button {
+    transition: all 0.3s ease;
+    background-color: #e9ecef; /* Bootstrap's light gray */
+    color: #212529; /* Bootstrap's dark gray */
+    border: 1px solid #dee2e6;
+}
+
+.service-button.active {
+    background-color: #0d6efd; /* Bootstrap's primary blue */
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-button:hover {
+    background-color: #d3d9df;
+}
+
+.service-button.active:hover {
+    background-color: #0b5ed7;
+}
+
+
+/* Pricing Card hover effect */
+.price-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #EAEAEA;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Simple backdrop blur for sticky header */
+.backdrop-blur {
+    backdrop-filter: blur(10px);
+}

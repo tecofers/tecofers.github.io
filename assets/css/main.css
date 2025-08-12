@@ -261,6 +261,24 @@ body.is-homepage .hero {
     transform: translateY(-50%);
 }
 
+.testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.testimonial-card .blockquote {
+    font-size: 1.1rem;
+}
+
+.testimonial-card .blockquote-footer {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
 /* Testimonial Enhancements */
 .carousel-item {
   transition: all 0.5s ease;

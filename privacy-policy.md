@@ -1,12 +1,10 @@
 ---
-layout: default
+layout: legal
 title: Privacy Policy
 permalink: /privacy-policy/
 ---
 
-# Privacy Policy
-
-*Last Updated: March 15, 2025*
+*Last Updated: August 07, 2025*
 
 ## Introduction
 

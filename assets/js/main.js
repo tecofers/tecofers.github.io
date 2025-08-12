@@ -1,121 +1,97 @@
-
 (function() {
   "use strict";
 
   /**
+   * Easy selector helper function
+   */
+  const select = (el, all = false) => {
+    el = el.trim()
+    if (all) {
+      return [...document.querySelectorAll(el)]
+    } else {
+      return document.querySelector(el)
+    }
+  }
+
+  /**
+   * Easy event listener function
+   */
+  const on = (type, el, listener, all = false) => {
+    let selectEl = select(el, all)
+    if (selectEl) {
+      if (all) {
+        selectEl.forEach(e => e.addEventListener(type, listener))
+      } else {
+        selectEl.addEventListener(type, listener)
+      }
+    }
+  }
+
+  /**
+   * Easy on scroll event listener 
+   */
+  const onscroll = (el, listener) => {
+    el.addEventListener('scroll', listener)
+  }
+
+  /**
    * Header toggle
    */
-// Replace lines 15-22 in main.js with this code
-const headerToggleBtn = document.querySelector('.header-toggle');
-
-if (headerToggleBtn) {
-  function headerToggle() {
-    document.querySelector('#header').classList.toggle('header-show');
-    headerToggleBtn.classList.toggle('bi-list');
-    headerToggleBtn.classList.toggle('bi-x');
+  const headerToggleBtn = select('.header-toggle');
+  if (headerToggleBtn) {
+    const headerToggle = () => {
+      select('#header').classList.toggle('header-show');
+      headerToggleBtn.classList.toggle('bi-list');
+      headerToggleBtn.classList.toggle('bi-x');
+    }
+    on('click', '.header-toggle', headerToggle);
   }
-  headerToggleBtn.addEventListener('click', headerToggle);
-}
+
   /**
    * Hide mobile nav on same-page/hash links
    */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.header-show')) {
-        headerToggle();
-      }
-    });
-
-  });
+  on('click', '#navmenu a', () => {
+    if (select('.header-show')) {
+      select('#header').classList.remove('header-show');
+      headerToggleBtn.classList.remove('bi-x');
+      headerToggleBtn.classList.add('bi-list');
+    }
+  }, true);
 
   /**
    * Toggle mobile nav dropdowns
    */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
-  });
+  on('click', '.navmenu .toggle-dropdown', function(e) {
+    e.preventDefault();
+    this.parentNode.classList.toggle('active');
+    this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
+    e.stopImmediatePropagation();
+  }, true);
 
-  /**
-   * Preloader
-   */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove();
-    });
-  }
 
   /**
    * Scroll top button
    */
-  let scrollTop = document.querySelector('.scroll-top');
-
-function toggleScrollTop() {
+  const scrollTop = select('.scroll-top');
   if (scrollTop) {
-    window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-  }
-}
- if (scrollTop) {
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
-}
-  /**
-   * Animation on scroll function and init
-   */
-  function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
+    const toggleScrollTop = () => {
+      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+    }
+    window.addEventListener('load', toggleScrollTop);
+    document.addEventListener('scroll', toggleScrollTop);
+    on('click', '.scroll-top', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
   }
-  window.addEventListener('load', aosInit);
-
-  /**
-   * Init typed.js
-   */
-  window.addEventListener('load', function() {
-  const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
-    let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',').map(item => item.trim());
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000,
-      startDelay: 1000,
-      showCursor: true,
-      cursorChar: '|',
-      autoInsertCss: true
-    });
-  }
-});
-
-  /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
 
   /**
    * Animate the skills items on reveal
    */
-  let skillsAnimation = document.querySelectorAll('.skills-animation');
+  const skillsAnimation = select('.skills-animation', true);
   skillsAnimation.forEach((item) => {
     new Waypoint({
       element: item,
@@ -130,126 +106,188 @@ function toggleScrollTop() {
   });
 
   /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
-
-  /**
    * Init isotope layout and filters
    */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
-    let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
-    let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
-    let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
+  const initIsotope = () => {
+    select('.isotope-layout', true).forEach(function(isotopeItem) {
+      let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
+      let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
+      let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
-    let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: filter,
-        sortBy: sort
+      let initIsotope;
+      imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+        initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
+          itemSelector: '.isotope-item',
+          layoutMode: layout,
+          filter: filter,
+          sortBy: sort
+        });
+      });
+
+      isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
+        filters.addEventListener('click', function() {
+          isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
+          this.classList.add('filter-active');
+          initIsotope.arrange({
+            filter: this.getAttribute('data-filter')
+          });
+          if (typeof AOS !== 'undefined') {
+            AOS.refresh();
+          }
+        }, false);
       });
     });
-
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-        this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        if (typeof aosInit === 'function') {
-          aosInit();
-        }
-      }, false);
-    });
-
-  });
-
-  /**
-   * Init swiper sliders
-   */
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
-
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
-      }
-    });
   }
-
-  window.addEventListener("load", initSwiper);
 
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener('load', function(e) {
+  const hashLinksScroll = () => {
     if (window.location.hash) {
-      if (document.querySelector(window.location.hash)) {
-        setTimeout(() => {
-          let section = document.querySelector(window.location.hash);
+      setTimeout(() => {
+        let section = select(window.location.hash);
+        if (section) {
           let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
           window.scrollTo({
             top: section.offsetTop - parseInt(scrollMarginTop),
             behavior: 'smooth'
           });
-        }, 100);
-      }
+        }
+      }, 100);
     }
-  });
+  }
 
   /**
    * Navmenu Scrollspy
    */
-  let navmenulinks = document.querySelectorAll('.navmenu a');
-
-  function navmenuScrollspy() {
+  const navmenuScrollspy = () => {
+    const navmenulinks = select('.navmenu a', true);
     navmenulinks.forEach(navmenulink => {
       if (!navmenulink.hash) return;
-      let section = document.querySelector(navmenulink.hash);
+      let section = select(navmenulink.hash);
       if (!section) return;
       let position = window.scrollY + 200;
       if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
+        select('.navmenu a.active', true).forEach(link => link.classList.remove('active'));
         navmenulink.classList.add('active');
       } else {
         navmenulink.classList.remove('active');
       }
     })
   }
-  window.addEventListener('load', navmenuScrollspy);
-  document.addEventListener('scroll', navmenuScrollspy);
-  document.addEventListener('DOMContentLoaded', function() {
-  console.log("Initializing navbar scroll effect");
   
-  const navbar = document.querySelector('.navbar');
-  
-  if (navbar) {
-    console.log("Navbar found, adding scroll listener");
-    
-    // Apply initial state
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    }
-    
-    window.addEventListener('scroll', function() {
+  /**
+   * Navbar scroll effect
+   */
+  const navbarScroll = () => {
+      const navbar = select('.navbar');
+      if (!navbar) return;
+      
       if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
+          navbar.classList.add('scrolled');
       } else {
-        navbar.classList.remove('scrolled');
+          navbar.classList.remove('scrolled');
+      }
+  }
+
+  /**
+   * Loading animation
+   */
+  const checkVisibility = () => {
+    const elements = select('.loading', true);
+    elements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        el.classList.add('loaded');
       }
     });
-  } else {
-    console.log("Navbar not found");
   }
-});
+
+  /**
+   * Window Load Event
+   */
+  window.addEventListener('load', () => {
+    // Preloader
+    const preloader = select('#preloader');
+    if (preloader) {
+      preloader.remove();
+    }
+
+    // AOS Init
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 600,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+    }
+
+    // Typed Init
+    const selectTyped = select('.typed');
+    if (selectTyped) {
+      let typed_strings = selectTyped.getAttribute('data-typed-items');
+      typed_strings = typed_strings.split(',').map(item => item.trim());
+      new Typed('.typed', {
+        strings: typed_strings,
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 2000,
+        startDelay: 1000,
+        showCursor: true,
+        cursorChar: '|',
+        autoInsertCss: true
+      });
+    }
+
+    // Pure Counter
+    if (typeof PureCounter !== 'undefined') {
+      new PureCounter();
+    }
+
+    // GLightbox
+    if (typeof GLightbox !== 'undefined') {
+      GLightbox({
+        selector: '.glightbox'
+      });
+    }
+    
+    // Isotope
+    initIsotope();
+
+    // Swiper
+    if (typeof Swiper !== 'undefined') {
+      document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+        let config = JSON.parse(
+          swiperElement.querySelector(".swiper-config").innerHTML.trim()
+        );
+        new Swiper(swiperElement, config);
+      });
+    }
+    
+    // Hash link scrolling
+    hashLinksScroll();
+    
+    // Navmenu Scrollspy
+    navmenuScrollspy();
+  });
+
+  /**
+   * DOMContentLoaded Event
+   */
+  document.addEventListener('DOMContentLoaded', () => {
+    navbarScroll();
+    checkVisibility();
+  });
+  
+  /**
+   * Scroll Event
+   */
+  document.addEventListener('scroll', () => {
+    navbarScroll();
+    navmenuScrollspy();
+    checkVisibility();
+  });
 
 })();

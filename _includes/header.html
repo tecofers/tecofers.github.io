@@ -12,75 +12,23 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <!-- Navigation Menu -->
+            <!-- New Simplified Navigation Menu -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
                     </li>
-                    
-                    <!-- Services Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {% if page.url contains '/services/' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown">
-                            Services
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ '/services/technical-writing' | relative_url }}">Technical Writing</a></li>
-                            <li><a class="dropdown-item" href="{{ '/services/medical-writing' | relative_url }}">Medical Content</a></li>
-                            <li><a class="dropdown-item" href="{{ '/services/blog-writing' | relative_url }}">Blog Writing</a></li>
-                            <li><a class="dropdown-item" href="{{ '/services/academic-writing' | relative_url }}">Academic Writing</a></li>
-                            <li><a class="dropdown-item" href="{{ '/services/marketing-copy' | relative_url }}">Marketing Copy</a></li>
-                            <li><a class="dropdown-item" href="{{ '/services/seo-content' | relative_url }}">SEO Content</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{ '/services' | relative_url }}">All Services</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Portfolio Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {% if page.url contains '/portfolio/' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown">
-                            Portfolio
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ '/portfolio/technical-articles' | relative_url }}">Technical Articles</a></li>
-                            
-                            <li><a class="dropdown-item" href="{{ '/portfolio/blog-writing' | relative_url }}">Blog Writing</a></li>
-
-                            <li><a class="dropdown-item" href="{{ '/portfolio/whitepapers' | relative_url }}">Whitepapers</a></li>
-
-                            <li><a class="dropdown-item" href="{{ '/portfolio/case-studies' | relative_url }}">Case Studies</a></li>
-
-                            <li><a class="dropdown-item" href="{{ '/portfolio/marketing-articles' | relative_url }}">Marketing Content</a></li>
-
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{ '/portfolio' | relative_url }}">Explore All</a></li>
-                                                     
-                        </ul>
-                    </li>
-                    
-                    <!-- Content Library (Replaces Blog) -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {% if page.url contains '/blog/' or page.url contains '/insights/' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown">
-                            Content Library
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ '/content-library/technical-articles' | relative_url }}">Technical Articles</a></li>
-                            <li><a class="dropdown-item" href="{{ '/content-library/non-technical-articles' | relative_url }}">Non-Technical Articles</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{ '/content-library/all-articles' | relative_url }}">All Articles</a></li>
-                        </ul>
-                    </li>
-                    
                     <li class="nav-item">
-                        <a class="nav-link {% if page.url == '/my-resume/' %}active{% endif %}" href="{{ '/my-resume' | relative_url }}">My Resume</a>
+                        <a class="nav-link {% if page.url == '/services/' %}active{% endif %}" href="{{ '/services' | relative_url }}">Services</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url == '/work/' %}active{% endif %}" href="{{ '/work' | relative_url }}">Work</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link {% if page.url == '/about/' %}active{% endif %}" href="{{ '/about' | relative_url }}">About</a>
                     </li>
-                    
                     <li class="nav-item">
-                        <a class="nav-link {% if page.url == '/contact/' %}active{% endif %}" href="{{ '/contact' | relative_url }}">Contact Me</a>
+                        <a class="nav-link {% if page.url == '/contact/' %}active{% endif %}" href="{{ '/contact' | relative_url }}">Contact</a>
                     </li>
                 </ul>
                 

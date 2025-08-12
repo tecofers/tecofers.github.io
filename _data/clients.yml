@@ -1,4 +1,14 @@
 current_clients:
+  - name: CorexTech
+    industry: Technology
+    services: IT Service Provider
+    logo: corextech.png
+
+  - name: Vultr
+    industry: Technology
+    services: Cloud Service Provider
+    logo: vultr.png
+    
   - name: Baeldung
     industry: Technology
     services: Technical content writing
@@ -14,7 +24,6 @@ current_clients:
     services: Technical content writing
     logo: shop-online-newyork.png
 
-past_clients:
   - name: HowToForge
     logo: howtoforge.png
     
@@ -23,6 +32,7 @@ past_clients:
   
   - name: LinuxHint
     logo: linuxhint.png    
+
 
 testimonials:
   - quote: "I built an instance of KVM/Debian to reproduced the technical article published by Ali Imram and everything works properly without needing to do any extra searches on internet.."
