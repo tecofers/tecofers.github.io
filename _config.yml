@@ -4,9 +4,9 @@ description: One Stop Solution for All Your Content Writing Needs
 
 # Set your production URL (works for both local and GitHub Pages)
 # For custom domain:
-url: "tecofers.github.io"
+#url: "tecofers.github.io"
 # For GitHub Pages default domain, comment above line and uncomment below:
-# url: "https://tecofers.github.io"
+url: "https://tecofers.github.io"
 baseurl: "" # Leave empty for custom domain; set to "/repo-name" if not using custom domain
 
 # Build settings
@@ -42,11 +42,7 @@ exclude:
   - .git
 
 # Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-paginate
+
 
 # Default categories
 defaults:
