@@ -1,8 +1,13 @@
 # Site settings
 title: Where Ideas Turn into Impact
 description: One Stop Solution for All Your Content Writing Needs
-baseurl: "https://tecofers.com" # the subpath of your site
-url: "tecofers.github.io" # the base hostname & protocol for your site
+
+# Set your production URL (works for both local and GitHub Pages)
+# For custom domain:
+url: "https://tecofers.com"
+# For GitHub Pages default domain, comment above line and uncomment below:
+# url: "https://tecofers.github.io"
+baseurl: "" # Leave empty for custom domain; set to "/repo-name" if not using custom domain
 
 # Build settings
 markdown: kramdown
@@ -35,13 +40,14 @@ exclude:
   - node_modules
   - vendor
   - .git
-#favicon: "/favicon.ico"
 
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-paginate
+
 # Default categories
 defaults:
   -
