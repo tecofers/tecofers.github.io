@@ -21,6 +21,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16x16.png' | relative_url }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32x32.png' | relative_url }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+    {% if page.url == '/services.html' %}
+      <link rel="stylesheet" href="{{ '/services-custom.css' | relative_url }}">
+    {% endif %}
 </head>
 <body class="{% if page.url == '/' %}home{% endif %}{% if page.layout == 'portfolio' or page.layout == 'page' %}has-page-title{% endif %}">
     {% include header.html %}
@@ -47,6 +50,10 @@
     <!-- Main JS File -->
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 
+    {% if page.url == '/services.html' %}
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="{{ '/assets/js/services.js' | relative_url }}"></script>
+    {% endif %}
 
 </body>
 </html>
