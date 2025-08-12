@@ -535,26 +535,3 @@ html {
         font-size: 3rem;
     }
 }
-
-/* Hero Image Styles */
-.hero-image {
-  height: 50vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-}
-
-.hero-text {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-radius: 10px;
-}
-
-.hero-text h1 {
-  font-size: 3rem;
-  margin-bottom: 0;
-}
