@@ -6,6 +6,7 @@ GEM
     bigdecimal (3.2.2)
     colorator (1.1.0)
     concurrent-ruby (1.3.5)
+    csv (3.3.5)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
@@ -156,6 +157,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  csv
   http_parser.rb (~> 0.6.0)
   jekyll (~> 4.3.3)
   jekyll-feed
