@@ -1,7 +1,7 @@
 # Site settings
 title: Where Ideas Turn into Impact
 description: One Stop Solution for All Your Content Writing Needs
-baseurl: "" # the subpath of your site
+baseurl: "https://tecofers.com" # the subpath of your site
 url: "tecofers.github.io" # the base hostname & protocol for your site
 
 # Build settings
