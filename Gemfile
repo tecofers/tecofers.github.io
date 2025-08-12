@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+ruby "3.3.0" # GitHub Pages as of Feb 2025, adjust if needed
 
 gem "jekyll", "~> 4.3.3"
 
@@ -8,7 +9,9 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag"
   gem "jekyll-paginate"
   gem "base64" 
+  gem "github-pages", group: :jekyll_plugins
   gem "csv"
+  gem "logger"
 
 end
 
