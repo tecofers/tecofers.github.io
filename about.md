@@ -1,16 +1,43 @@
 ---
 layout: portfolio
-title: About
+title: About Me
 permalink: /about/
 ---
 
+<p> Hi, I’m Ali Imran.
+I’m a content strategist and digital solutions specialist.
+
+I work with startups and small businesses to turn complex ideas into clear content. Along with that, I create engaging social media strategies and build conversion-ready websites.
+
+Over the past 4.5 years, I’ve delivered technical content for clients like Linux Magazine, Baeldung, and Vultr Cloud Services. I’ve also written non-technical content across various platforms.
+
+Here are some highlights:
+
+10+ articles for Linux Magazine, with several featured on their homepage.
+
+40+ articles on Linux administration and DevOps for Baeldung.
+
+90+ tutorials on Linux and cloud technologies for LinuxHint.
+
+Plus, non-technical content published on other platforms.
+
+Alongside writing, I design and build fast, secure websites, set up e-commerce platforms, and create editorial workflows that keep projects moving smoothly.
+
+Here’s how I work:
+Quick discovery, precise messaging, and measurable outcomes—delivered on time, with no headaches for my clients. I’m strict about deadlines and quality.
+
+I don’t run paid ads or manage media buying. My focus is on content, design, and digital assets that align with business goals and deliver clear KPIs.
+
+If this sounds like the right fit, check my portfolio for case studies and samples, and book a free 15-minute consultation—link in profile.
+
+Let’s make the next piece of content—and the next website—actually move the needle.
+
+</p>
+
+
 ## How it Started?
 
-<div class="text-center mt-5">
-    <a href="/path/to/your/resume.pdf" class="btn btn-primary btn-lg" download>
-        <i class="bi bi-download me-2"></i> Download My Resume
-    </a>
-</div>
+
 
 <!-- Bootstrap v5.3.3 About Timeline Section -->
 <section class="py-5" id="about">

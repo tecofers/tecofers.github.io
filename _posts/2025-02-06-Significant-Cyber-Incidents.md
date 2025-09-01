@@ -16,7 +16,7 @@ Hey there! Let's dive into the wild world of cyber incidents that rocked our dig
 
 ## **April 2022: Viasat Satellite Hack**
 
-st as tensions escalated with Russia's invasion of Ukraine, hackers targeted Viasat's satellite internet system. cyberattack disrupted communications across Europe, even causing 5,800 wind turbines in Germany to lose remote monitoring capabilities. Thlprit? A wiper malware named AcidRain, believed to be linked to Russian military operations. ([enikipedia.org](https://chatgpt.com/c/en.wikipedia.org/wiki/Viasat_hack?utm_source=atgpt.com))
+st as tensions escalated with Russia's invasion of Ukraine, hackers targeted Viasat's satellite internet system. cyberattack disrupted communications across Europe, even causing 5,800 wind turbines in Germany to lose remote monitoring capabilities. Thlprit? A wiper malware named AcidRain, believed to be linked to Russian military operations. 
 
 ## **May 2023: LockBit's Ransomware Rampage**
 
